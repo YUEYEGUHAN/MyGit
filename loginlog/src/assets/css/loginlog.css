@@ -1,0 +1,1803 @@
+
+#PiccTopei{
+  width: 100%;
+  height: 100%;
+}
+.piccTop{
+  width: 100%;
+  height: 60px;
+  background-color: #1E7684;
+  color: #ffffff;
+  position: fixed;
+  top: 0;
+  z-index: 99999;
+}
+.TopSpan{
+  font-size: 28px;
+  float: left;
+  margin-left: 15px;
+  margin-top: 10px;
+}
+.piccCenter{
+  width: 100%;
+  height: calc(100% - 90px);
+  overflow: visible;
+  position: absolute;
+  top: 80px;
+  z-index: 50;
+}
+.MainCenter{
+  height: calc(100% - 55px);
+  width: 99%;
+  position: relative;
+  left:0.5%;
+  border: 1px solid #0FFAFF;
+  /* padding: 10px 10px; */
+}
+
+.piccMain{
+  float: left;
+  width: 100%;
+  height: 100%;
+  /* padding-left: 200px; */
+  background-color: #052438;
+}
+
+.TextboxCollection{
+  width: 100%;
+  margin-top: 10px;
+  color: #3FAFB8;
+  font-size: 15px;
+  padding: 5px 0px;
+  height: 55px;
+}
+.mainInput{
+  height: 28px;
+  width: 100px;
+  margin-left: 6px;
+  background-color: #00000000;
+  border: 1px solid #0FFAFF;
+  color: #0FFAFF;
+  padding: 0 8px;
+  font-size: 14px;
+  border-radius: 2px;
+}
+input:focus{outline:none;}
+
+.inputCollection{
+  float: left;
+  padding-top: 8px;
+  margin-left: 10px;
+  color: #eee;
+  width: 22%;
+}
+
+.inputCollection1{
+  float: left;
+  padding-top: 8px;
+  margin-left: 10px;
+  color: #eee;
+  width: 40%;
+}
+
+.mainSelect{
+  height: 28px;
+  margin-left: 4px;
+  background-color: rgba(0, 0, 0, 0);
+  color: #0FFAFF;
+  border: 1px solid #0FFAFF;
+  padding: 0px 5px;
+  outline:none;
+  width: 100px;
+  border-radius: 2px;
+}
+.mainSelect option{
+  background-color: #052438;
+  color: #0FFAFF;
+}
+.BtnCollection{
+  float: right;
+}
+.BtnClass{
+  padding: 3px 15px;
+  border-radius: 3px;
+  /* border:1px solid #0C556C; */
+  background-color: rgba(72, 157, 170, 0);
+  float: left;
+  color: #0FFAFF;
+  outline:none;
+  background-image: url('./img/bg_6.png');
+  background-size: 100% 100%;
+  border: none;
+  margin-top: 4px;
+}
+.exportBtn{
+  /* background-color: #2ca9ab; */
+  /* border: 1px solid #2ca9ab; */
+  /* border:1px solid #0C556C; */
+   background-color: rgba(72, 157, 170, 0);
+   margin-left: 10px;
+   border: none;
+}
+.ReturnBtn{
+  float: right;
+  padding: 2px 15px;
+  border-radius: 3px;
+  color: #0FFAFF;
+  margin-top: 20px;
+  margin-right: 16px;
+  outline:none;
+  font-size: 14px;
+  cursor: pointer;
+}
+.Returnimg{
+  float: left;
+  margin-top: -2px;
+  margin-right: 5px;
+  font-size: 18px;
+}
+.TableDiv{
+  position: relative;
+  top: 110px;
+  left: 19%;
+  width: 80.5%;
+  height: calc(100% - 170px);
+}
+/* 设置表 */
+#piccTable{
+  width: 100%;
+  color:rgba(255, 255, 255, 0.85);
+  font: normal bold 14px "微软雅黑";
+  background-color: rgba(36, 160, 157, 0.15);
+}
+#piccTable thead{
+  color: #0FFAFF;
+  font-size: 15px;
+  }
+  /* 表间隔颜色设置 */
+  .table-striped > tbody > tr:nth-of-type(odd){
+    background-color: rgba(78, 144, 142, 0);
+    /* background-color: rgba(36, 160, 157, 0.1) */
+  }
+  .table-striped > tbody > tr{
+    background-color: rgba(78, 144, 142, 0.1);
+    /* background-color: rgba(36, 160, 157, 0.15); */
+  }
+  /* 表格标题的 */
+  .bootstrap-table .table thead>tr>th{
+    background-color: rgba(78, 144, 142, 0.1);
+    /* background-color: rgba(36, 160, 157, 0.15); */
+  }
+  #piccTable td{
+  vertical-align:middle;
+  padding: 10px;
+  font-size: 14px;
+    /* border: 1px solid #0c485d; */
+    /* border: 1px solid #0FFAFF; */
+    border: none;
+    text-align: center;
+  }
+  .table-hover > tbody > tr:hover{
+    /* background-color: #146c73; */
+    background-color: rgba(36,160, 157, 0.6);
+  }
+
+  /* 设置表单的边框颜色 */
+  .bootstrap-table .table{
+    border: 1px solid #0FFAFF !important;
+  }
+  .table-bordered{
+    border: 1px solid #0FFAFF;
+  }
+  /* 设置表单的底部边框颜色 */
+  .fixed-table-footer{
+    border: 1px solid #0FFAFF;
+  }
+
+  .table > caption + thead > tr:first-child > th, 
+  .table > colgroup + thead > tr:first-child > th, 
+  .table > thead:first-child > tr:first-child > th, 
+  .table > caption + thead > tr:first-child > td, 
+  .table > colgroup + thead > tr:first-child > td, 
+  .table > thead:first-child > tr:first-child > td{
+    text-align: center;
+    /* border: 1px solid #0c485d; */
+    /* border: 1px solid #0FFAFF; */
+    border: none;
+  }
+  .fixed-table-header table{
+    width: 100% !important;
+    }
+  .bootstrap-table{
+    height: 100%;
+  }
+  .fixed-table-container{
+    border:none;
+    overflow-y: auto;
+    height: 100%;
+  }
+  .fixed-table-pagination{
+    color: #6BD0CD;
+  }
+/* 加载慢的时候 */
+.fixed-table-loading{
+  height: 80px;
+  width: 400px;
+  padding-top: 25px;
+  color: #6BD0CD;
+  background: #001019;
+  border: 1px solid #6BD0CD;
+  font-size: 20px;
+  border-radius: 8px;
+  margin-top: 50px;
+  margin-left: 250px;
+  display: none !important;
+  }
+  /* 分页选择，选择10行，20行的 */
+  .btn-default{
+    padding: 4px 12px;
+    background-color: rgba(0, 16, 25, 0.5);
+    /* border: 1px solid #6BD0CD; */
+    color: #6BD0CD;
+    border: 1px solid #3ea3a7;
+  }
+  .btn-default:hover{
+    color: #fff;
+    background-color: #065656;
+    border-color: #6BD0CD;
+  }
+  .pagination > .disabled > a{
+    background-color: #065656;
+    border-color:  #6BD0CD;
+  }
+  .btn-default:active, .btn-default.active,
+  .open > .dropdown-toggle.btn-default{
+    color: #fff;
+    background-color: #065656;
+    border-color: #6BD0CD;
+  }
+  .dropdown-menu{
+    background-color: #001019cc;
+    /* border: 1px solid #6BD0CD; */
+    color: #6BD0CD;
+    
+    border: 1px solid #4f6167;
+  }
+  .dropdown-menu > .active > a{
+    background-color: #065656;
+  }
+  .dropdown-menu > li > a{
+    color: #d9edf7;
+  }
+  /* 分页的 */
+#pageLimit{
+  position: absolute;
+  right: 10px;
+  bottom: -10px;
+  }
+  .pagination > .active > a{
+  background-color: #065656; 
+  border-color: #7AE9E5;
+  color: #7AE9E5;
+  cursor:pointer; /*小手*/
+  }
+  .pagination > li > a{
+  background-color: rgba(0, 0, 0, 0);
+  color: #7AE9E5;
+  cursor:pointer; /*小手*/
+  /* border: 1px solid #6BD0CD; */
+  
+  border: 1px solid #3ea3a7;
+  }
+  .pagination > li > a:hover{
+  color: #ffffff;
+  background-color: #3f7c9e;
+  }
+  /* .fixed-table-body{
+    height: 412px;
+  } */
+  /* 表格的 */
+.fixed-table-body::-webkit-scrollbar {/*滚动条整体样式*/
+  width: 4px;     /*高宽分别对应横竖滚动条的尺寸*/
+  height: 4px;
+}
+.fixed-table-body::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+  border-radius: 5px;
+  background:#4FD7DC;
+}
+.fixed-table-body::-webkit-scrollbar-track {/*滚动条里面轨道*/
+  border-radius: 5px;
+  background: rgba(0,0,0,0.1);
+}
+
+.fixed-table-container tbody td .th-inner, .fixed-table-container thead th .th-inner{
+  padding: 12px;
+  /*font-size: 18px;*/
+  text-overflow: clip;
+  font: normal bold 13px "微软雅黑";
+  white-space: normal;  /* //内容超出自动换行 */
+}
+
+/* 时间控件 */
+.dataDiv{
+  height: 28px;
+  width: 160px;
+  float: left;
+}
+.dataSpan{
+  float: left;
+  margin-top: 5px;
+  margin-right: 6px;
+}
+.fontData{
+  height: 28px;
+  width: 128px;
+  border-radius: 0px;
+  color: #0FFAFF;
+  outline:none;
+  background:#052438;
+  border: 1px solid #0FFAFF;
+  border-radius: 2px;
+  border-right: none;
+  }
+  .fontData:focus{ 
+    outline: none;
+    border: 1px solid #0FFAFF;
+  }
+
+  .form-control:focus{
+    border: 1px solid #0FFAFF;
+    box-shadow: none;
+  }
+  .input-group-addon{
+    padding:0px 6px;
+    border-radius: 0px;
+    background:#052438;
+    border: 1px solid #0FFAFF;
+    border-radius: 2px;
+    border-left: none;
+  }
+.background_addon{
+  /* background:#093f50; */
+  background: #062530;
+}
+  /* 时间控件 */
+.datepicker-dropdown:after {
+  border: none;
+  }
+  .datepicker{
+  color: #49CAD0;
+  /* background-color: #02374F; */
+  background-color: rgba(0, 16, 25, .9);
+  z-index: 999 !important;
+  }
+  .datepicker table tr td.new{
+  color: #35A1AD;
+  }
+  .datepicker table tr td.day:hover{
+  background-color: #176275;
+  }
+  .datepicker table tr td.active.active{
+  background-color: #176275;
+  }
+  .datepicker .datepicker-switch:hover,
+  .datepicker .prev:hover,
+  .datepicker .next:hover,
+  .datepicker tfoot tr th:hover{
+  background-color: #176275;
+  }
+
+  .datepicker table tr td span:hover, .datepicker table tr td span.focused{
+    background: #303c46;
+  }
+  .fixed-table-pagination .pagination-detail, .fixed-table-pagination div.pagination{
+    font-size: 16px;
+  }
+
+  .tab-header{
+    /* height: 45px; */
+    text-align: center;
+    font-size: 16px;
+    float: left;
+    /* margin: 0px;
+    padding: 0px; */
+    margin-top: 37px;
+    margin-left: 72px;
+  }
+    
+  .tab-header li{
+    list-style-type: none;
+    float: left;
+    /* width: 200px; */
+    line-height: 24px;
+    cursor: pointer;
+    padding: 2px 10px;
+    margin: 2px 43px;
+  }
+
+.first-li,.second-li,.thirdiy-li{
+  /* margin-left: 10px; */
+  color: #62C1BE;
+  /* border: 1px solid #487180; */
+  }
+
+  /*控制列表选项卡活动状态时的背景颜色*/
+.first-li.active,.second-li.active,.thirdiy-li.active{
+  color: #FFE00D;
+  background-image: url('../css/img/active-li.png');
+  background-size: contain;
+  /* background-color: #0a4456; */
+}
+
+  /*控制列表切换内容的显示与隐藏*/
+  .first-content, .second-content,.thirdiy-content{
+    width: 100%;
+    height: 99%;
+    display: none;
+  }
+  .first-content.active, .second-content.active,.thirdiy-content.active{
+  display: block;
+  }
+
+
+.system_con,.system_Bulletin{
+  /* width: 99%;
+  height: calc(100% - 40px);
+  margin: 0px;
+  border: 1px solid #487180;
+  margin-left: 0.5%; */
+  /* 、 */
+  height: calc(100% - 55px);
+  width: 99%;
+  position: relative;
+  left:0.5%;
+  border: 1px solid #0FFAFF;
+}
+/* 登录日志 */
+.LogList_system{
+  height: 55px;
+  text-align: center;
+  font-size: 16px;
+  width: 99%;
+  margin: 0px auto;
+  margin-top: 10px;
+  padding: 0px;
+  color: #0FFAFF;
+}
+
+.LogList_system li{
+  list-style-type: none; 
+  width: 200px;
+  height: 48px;
+  background-image: url('../css/img/bg_26.png');
+  background-repeat: repeat-y;
+  background-size:200px 48px;
+  float: left;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.LogList_system li.active{
+  color: #ffffff;
+  background-image: url('../css/img/bg_25.png');
+}
+.icon_Li{
+  float: left;
+  font-size: 26px;
+  color: #0FFAFF;
+  margin-top: 6px;
+  margin-left: 11px;
+}
+.icon_Lix1{
+  float: left;
+  font-size: 26px;
+  color: #0FFAFF;
+  margin-top: 6px;
+  margin-left: 7px;
+}
+
+.Iconli_text{
+  float: left;
+  margin-left: 24px;
+  margin-top: 14px;
+}
+
+.tab-system,.tab_Bulletin{
+    /* height: 31px;
+    text-align: center;
+    font-size: 14px;
+    width: 99%;
+    margin: 0px auto;
+    margin-top: 10px;
+    padding: 0px; */
+    /* background-color: #0c313f; */
+    /* display: inline-flex; */
+    height: 55px;
+    text-align: center;
+    font-size: 16px;
+    width: 99%;
+    margin: 0px auto;
+    margin-top: 10px;
+    padding: 0px;
+    color: #0FFAFF;
+  }
+
+.tab-system li,.tab_Bulletin li{
+  /* list-style-type: none;
+  float: left;
+  width: 200px;
+  line-height: 30px;
+  cursor: pointer;
+  border:1px solid #487180; */
+  list-style-type: none; 
+  width: 200px;
+  height: 48px;
+  background-image: url('../css/img/bg_26.png');
+  background-repeat: repeat-y;
+  background-size:200px 48px;
+  float: left;
+  margin-right: 20px;
+  cursor: pointer;
+  color: #0ffaff;
+}
+
+.tab-system li.active,.tab_Bulletin li.active{
+  color: #ffffff;
+  background-image: url('../css/img/bg_25.png');
+}
+
+/* .logon-li,.personnel-li{ */
+  /* color: #62C1BE; */
+  /* border: 1px solid #487180; */
+/* } */
+
+
+/* .download-li,.click-li,.Survey-li,.serveEecord-li,.openingProgress-li,.surveyTimeout-li,.loginAmount-li{ */
+  /* margin-left: 10px; */
+  /* color: #62C1BE; */
+  /* border: 1px solid #487180; */
+/* }  */
+  /*控制列表选项卡活动状态时的背景颜色*/
+/* .logon-li.active, .download-li.active, .click-li.active,.personnel-li.active,.Survey-li.active,.serveEecord-li.active,.openingProgress-li.active,.surveyTimeout-li.active,.loginAmount-li.active{ */
+  /* color: #ffffff; */
+  /* background-color: #093f50; */
+/* } */
+
+/*控制列表切换内容的显示与隐藏*/
+.LoginLog_content,.systemLog_content,.logon-content, .download-content, .click-content,.personnel-content,.Survey-content,.serveEecord-content,.openingProgress-content,.surveyTimeout-content,.loginAmount-content{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: none;
+}
+.LoginLog_content.active,.systemLog_content.active,.logon-content.active, .download-content.active, .click-content.active,.personnel-content.active,.Survey-content.active,.serveEecord-content.active,.openingProgress-content.active,.surveyTimeout-content.active,.loginAmount-content.active{
+  display: block;
+}
+
+/* 中部左div */
+.leftCenter{
+  position: absolute;
+  top:5px;
+  left: 0.5%;
+  /* width: 250px; */
+  width: 18%;
+  height: 97%;
+  font: normal bold 20px "微软雅黑";
+  text-align: left;
+}
+
+/* 中部右div */
+.rightCenter{
+  position: absolute;
+  left: 21%;
+  top: 10px;
+  width: 78%;
+  height: 460px;
+  text-align: left;
+}
+/* 中部两个标题 */
+.titleCenter{
+  width: 100%;
+  font: normal bold 16px "微软雅黑";
+  font-size: 16px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color: #ffffff;
+  margin-left: -1px;
+  /* background-color: #044A47; */
+  /* border: 1px solid #0F6665; */
+  float: left;
+  letter-spacing:1px;
+  border-radius: 2px; /* 圆角*/
+
+  background-color: #093f50;
+  border: 1px solid #0c485d;
+}
+.spanTitleCenter{
+  margin-left: 25px !important;
+}
+/* 总公司下 内容 */
+.listLeftCenter{
+  float: left;
+  width: 100%;
+  overflow: hidden;/*内容不能超出div*/
+  overflow-y: auto;/*内容多于div高度时，出现滚动条*/
+  overflow-x: auto;/*内容多于div宽度时，出现滚动条*/
+  font: normal bold 14px "微软雅黑";
+  font-size:14px;
+  /* background-color: rgba(78, 144, 142, 0.1); */
+  border-radius: 2px; /* 圆角*/
+  height: 100%;
+  letter-spacing:1px;
+  /* border: 1px solid #0c485d; */
+  /* background-image: url('./img/bg18X2.png'); */
+  /* background-size: 100% 100%; */
+}
+
+
+/* 地址下 内容 */
+.listRightCenter{
+  float: left;
+  width: 100%;
+  margin-left: -1px;
+  margin-top: 1px;
+  font: normal bold 14px "微软雅黑";
+  border-radius: 2px; /* 圆角*/
+  border: 1px solid #0F6665;
+  height: 91%;
+  letter-spacing:1px;
+  text-align: center;
+  /* background-color: rgba(78, 144, 142, 0.1); */
+  overflow-y: auto;
+}
+
+.comTree_mechanism{
+  height: 45px;
+  color: #fff;
+  background-image: url('./img/bg18x1.png'); 
+  background-size: 100% 100%;
+}
+
+.mechanism_span{
+  float: left;
+  margin-top: 12px;
+  margin-left: 26px;
+  font-size: 18px;
+}
+/* 控件的树状图 */
+.ztree{
+  background: none;
+  /* color: #6BD0CD; */
+  color: #0FFAFF;
+  width: 100%;
+  height: calc(100% - 45px);
+  border: none;
+  padding: 10px;
+  margin: 0px;
+  border: 1px solid #0ffaff;
+  border-top: none;
+  background-color: rgba(36, 160, 157, 0.15);
+}
+.ztree *{
+font: normal bold 14px "微软雅黑";
+font-size: 14px;
+}
+.ztree li{
+padding-top: 2px;
+}
+.ztree li a {
+/* color: rgb(91,181,179); */
+text-decoration : none;
+color: #0FFAFF;
+}
+.ztree li a:hover{
+color: #FFE00D;
+background-color: rgba(15, 250, 255, 0.3);
+}
+.ztree li span{
+letter-spacing: 1px;
+margin-left: 3px;
+}
+.ztree li a.curSelectedNode{
+border: none;    
+background-color: rgba(35, 21, 21, 0);
+color: #FFE00D;
+opacity: 1;
+}
+.ztree li span.button.switch {
+margin-right: 3px;
+}
+/* 设置 树状图 总公司的字体大小 */
+.ztree li a.level0 span{
+  font-size: 16px;
+}
+
+/* 控件的树状图 */
+
+  /*设置树状图 滚动条样式*/
+#comTree::-webkit-scrollbar {/*滚动条整体样式*/
+  width: 4px;     /*高宽分别对应横竖滚动条的尺寸*/
+  height: 4px;
+}
+#comTree::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+  border-radius: 5px;
+  background:#4FD7DC;
+}
+#comTree::-webkit-scrollbar-track {/*滚动条里面轨道*/
+  border-radius: 5px;
+  background: rgba(0,0,0,0.1);
+}
+
+  /*设置树状图 滚动条样式*/
+  #comTreePersonnel::-webkit-scrollbar {/*滚动条整体样式*/
+    width: 4px;     /*高宽分别对应横竖滚动条的尺寸*/
+    height: 4px;
+  }
+  #comTreePersonnel::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+    border-radius: 5px;
+    background:#4FD7DC;
+  }
+  #comTreePersonnel::-webkit-scrollbar-track {/*滚动条里面轨道*/
+    border-radius: 5px;
+    background: rgba(0,0,0,0.1);
+  }
+/*设置树状图 滚动条样式*/
+#comTreeSurvey::-webkit-scrollbar {/*滚动条整体样式*/
+  width: 4px;     /*高宽分别对应横竖滚动条的尺寸*/
+  height: 4px;
+}
+#comTreeSurvey::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+  border-radius: 5px;
+  background:#4FD7DC;
+}
+#comTreeSurvey::-webkit-scrollbar-track {/*滚动条里面轨道*/
+  border-radius: 5px;
+  background: rgba(0,0,0,0.1);
+}
+
+/*设置树状图 滚动条样式*/
+#comTreeServeEecord::-webkit-scrollbar {/*滚动条整体样式*/
+  width: 4px;     /*高宽分别对应横竖滚动条的尺寸*/
+  height: 4px;
+}
+#comTreeServeEecord::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+  border-radius: 5px;
+  background:#4FD7DC;
+}
+#comTreeServeEecord::-webkit-scrollbar-track {/*滚动条里面轨道*/
+  border-radius: 5px;
+  background: rgba(0,0,0,0.1);
+}
+
+/*设置树状图 滚动条样式*/
+#comTreeOpeningProgress::-webkit-scrollbar {/*滚动条整体样式*/
+  width: 4px;     /*高宽分别对应横竖滚动条的尺寸*/
+  height: 4px;
+}
+#comTreeOpeningProgress::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+  border-radius: 5px;
+  background:#4FD7DC;
+}
+#comTreeOpeningProgress::-webkit-scrollbar-track {/*滚动条里面轨道*/
+  border-radius: 5px;
+  background: rgba(0,0,0,0.1);
+}
+
+/*设置树状图 滚动条样式*/
+#comTreeSurveyTimeout::-webkit-scrollbar {/*滚动条整体样式*/
+  width: 4px;     /*高宽分别对应横竖滚动条的尺寸*/
+  height: 4px;
+}
+#comTreeSurveyTimeout::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+  border-radius: 5px;
+  background:#4FD7DC;
+}
+#comTreeSurveyTimeout::-webkit-scrollbar-track {/*滚动条里面轨道*/
+  border-radius: 5px;
+  background: rgba(0,0,0,0.1);
+}
+
+
+.cursor{
+  cursor:pointer; /*小手*/
+  }
+  
+.TozhirightCenter{
+  position: absolute;
+  top: 10px;
+  left: 19%;
+  width: 80.5%;
+  height: 45px;
+  border: 1px solid #0ffaff;
+  background-color: rgba(36, 160, 157, 0.15);
+  border-radius: 4px;
+}
+.case_centerDIv{
+  margin-left: 1.5%;
+  width: 26%;
+  float: left;
+  height: 45px;
+}
+
+.case_centerDIv1{
+  margin-left: 1.5%;
+  width: 25%;
+  float: left;
+  height: 45px;
+}
+
+.Tozhi-centerSpan{
+  font: normal bold 13px "微软雅黑";
+  font-size: 14px;
+  /* color: #2fb3be; */
+  color: #0FFAFF;
+  /* float: left;
+  margin-top: 12px; */
+}
+
+/* 设置输入框 */
+.inputText1{
+  width: 150px;
+  height: 25px;
+  font-size: 16px;
+  margin: 7px 0px;
+  padding: 0px 8px;
+  background:rgba(0, 0, 0, 0);
+  color:#0FFAFF;
+  border-radius: 2px;
+  border: 1px solid #0FFAFF;
+}
+
+/* 输入框 */
+.TozhiText{
+  width: 125px;
+  height: 28px;
+  outline: none;
+  margin-top:8px;
+}
+
+.width_185X{
+  width: 180px;
+}
+
+.width_85PX{
+  width: 180px;
+}
+
+.top_margin_10{
+  margin-top: 6px;
+}
+.case_table{
+  position: absolute;
+  top: 60px;
+  left: 19%;
+  width: 80.5%;
+  height: calc(100% - 120px);
+}
+
+.case_table1{
+  position: absolute;
+  top: 60px;
+  left: 19%;
+  width: 80.5%;
+  height: calc(100% - 160px);
+}
+
+/* 设置表 */
+#logonTable{
+  width: 100%;
+  color:rgba(255, 255, 255, 0.85);
+  font: normal bold 14px "微软雅黑";
+  background-color: rgba(36, 160, 157, 0.15);
+}
+#logonTable thead{
+  color: #0ffaff;
+  font-size: 15px;
+}
+#logonTable td{
+  vertical-align:middle;
+  padding: 10px;
+  font-size: 14px;
+  /* border: 1px solid #6BD0CD; */
+  /* border: 1px solid #0FFAFF; */
+  border: none;
+  text-align: center;
+}
+/* 设置表 */
+#downloadTable{
+  width: 100%;
+  color:rgba(255, 255, 255, 0.85);
+  font: normal bold 14px "微软雅黑";
+  background-color: rgba(36, 160, 157, 0.15);
+}
+#downloadTable thead{
+  color: #0ffaff;
+  font-size: 15px;
+}
+#downloadTable td{
+  vertical-align:middle;
+  padding: 10px;
+  font-size: 14px;
+  /* border: 1px solid #6BD0CD; */
+  /* border: 1px solid #0c485d; */
+  /* border: 1px solid #0FFAFF; */
+  border: none;
+  text-align: center;
+}
+
+
+/* 设置表 */
+#clickTable{
+  width: 100%;
+  color:rgba(255, 255, 255, 0.85);
+  font: normal bold 14px "微软雅黑";
+  background-color: rgba(36, 160, 157, 0.15);
+}
+#clickTable thead{
+  color: #0ffaff;
+  font-size: 15px;
+}
+#clickTable td{
+  vertical-align:middle;
+  padding: 10px;
+  font-size: 14px;
+  /* border: 1px solid #6BD0CD; */
+  /* border: 1px solid #0c485d; */
+  /* border: 1px solid #0FFAFF; */
+  border: none;
+  text-align: center;
+}
+/* 设置查勘车表单 */
+#SurveyTable{
+  width: 100%;
+  color:rgba(255, 255, 255, 0.85);
+  font: normal bold 14px "微软雅黑";
+  background-color: rgba(36, 160, 157, 0.15);
+}
+#SurveyTable thead{
+  color: #0ffaff;
+  font-size: 15px;
+}
+#SurveyTable td{
+  vertical-align:middle;
+  padding: 10px;
+  font-size: 14px;
+  /* border: 1px solid #6BD0CD; */
+  /* border: 1px solid #0c485d; */
+  /* border: 1px solid #0FFAFF; */
+  border: none;
+  text-align: center;
+}
+
+
+
+/* 设置人员上线率的表单 */
+#personnelTable{
+  width: 100%;
+  color:rgba(255, 255, 255, 0.85);
+  font: normal bold 14px "微软雅黑";
+  background-color: rgba(36, 160, 157, 0.15);
+}
+#personnelTable thead{
+  color: #0ffaff;
+  font-size: 15px;
+}
+#personnelTable td{
+  vertical-align:middle;
+  padding: 10px;
+  font-size: 14px;
+  /* border: 1px solid #6BD0CD; */
+  /* border: 1px solid #0c485d; */
+  /* border: 1px solid #0FFAFF; */
+  border: none;
+  text-align: center;
+}
+
+/* 设置 开通记度记录仪的的表单 */
+#openingProgressTable{
+  width: 100%;
+  color:rgba(255, 255, 255, 0.85);
+  font: normal bold 14px "微软雅黑";
+  background-color: rgba(36, 160, 157, 0.15);
+}
+#openingProgressTable thead{
+  color: #0ffaff;
+  font-size: 15px;
+}
+#openingProgressTable td{
+  vertical-align:middle;
+  padding: 10px;
+  font-size: 14px;
+  /* border: 1px solid #6BD0CD; */
+  /* border: 1px solid #0c485d; */
+  /* border: 1px solid #0FFAFF; */
+  border: none;
+  text-align: center;
+}
+
+
+/* 设置 查勘超时率的表单 */
+#surveyTimeoutTable{
+  width: 100%;
+  color:rgba(255, 255, 255, 0.85);
+  font: normal bold 14px "微软雅黑";
+  /* background-color: rgba(36, 160, 157, 0.15); */
+  border-top: none !important;
+}
+#surveyTimeoutTable thead{
+  color: #0ffaff;
+  font-size: 15px;
+}
+#surveyTimeoutTable td{
+  vertical-align:middle;
+  padding: 10px;
+  font-size: 14px;
+  /* border: 1px solid #6BD0CD; */
+  /* border: 1px solid #0c485d; */
+  /* border: 1px solid #0FFAFF; */
+  border: none;
+  text-align: center;
+}
+
+/*设置树状图 滚动条样式*/
+#comTreeLoginAmount::-webkit-scrollbar {/*滚动条整体样式*/
+  width: 4px;     /*高宽分别对应横竖滚动条的尺寸*/
+  height: 4px;
+}
+#comTreeLoginAmount::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+  border-radius: 5px;
+  background:#4FD7DC;
+}
+#comTreeLoginAmount::-webkit-scrollbar-track {/*滚动条里面轨道*/
+  border-radius: 5px;
+  background: rgba(0,0,0,0.1);
+}
+
+
+.Btnstyle{
+  margin-right: 10px;
+  margin-top: 4px;
+  
+}
+
+.icon_sou{
+  font-size: 26px;
+  color: #0ffaff;
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+/* 下拉列表 option*/
+.TozhiSelect option{
+  background: rgb(8, 29, 36);
+  }
+
+  /* 下拉列表 */
+  .TozhiSelect{
+    color: #0FFAFF;
+    margin-top:8px;
+    margin-left: 6px;
+    border: 1px solid #0FFAFF;
+    background: rgba(0, 0, 0, 0);
+    border-radius: 2px;
+    appearance: none;
+    /* -webkit-appearance: none;
+    -moz-appearance: none; */
+    padding-left: 5px;
+    cursor:pointer;
+    /* float: left; */
+  }
+  .DIV-TozhiSelect{
+    width: 14px;
+    height: 8px;
+    background: url(img/dropdown.png) no-repeat center;
+    /* position: absolute;
+    top: 24%;
+    margin-left: 226px; */
+    float: left;
+    pointer-events: none;
+  }
+  
+
+
+/*设置树状图 滚动条样式*/
+#comTree_LogList::-webkit-scrollbar {/*滚动条整体样式*/
+  width: 4px;     /*高宽分别对应横竖滚动条的尺寸*/
+  height: 4px;
+}
+#comTree_LogList::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+  border-radius: 5px;
+  background:#4FD7DC;
+}
+#comTree_LogList::-webkit-scrollbar-track {/*滚动条里面轨道*/
+  border-radius: 5px;
+  background: rgba(0,0,0,0.1);
+}
+
+
+  /*设置树状图 滚动条样式*/
+  #comTree_download::-webkit-scrollbar {/*滚动条整体样式*/
+    width: 4px;     /*高宽分别对应横竖滚动条的尺寸*/
+    height: 4px;
+  }
+  #comTree_download::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+    border-radius: 5px;
+    background:#4FD7DC;
+  }
+  #comTree_download::-webkit-scrollbar-track {/*滚动条里面轨道*/
+    border-radius: 5px;
+    background: rgba(0,0,0,0.1);
+  }
+  
+  
+
+    /*设置树状图 滚动条样式*/
+    #comTree_click::-webkit-scrollbar {/*滚动条整体样式*/
+      width: 4px;     /*高宽分别对应横竖滚动条的尺寸*/
+      height: 4px;
+    }
+    #comTree_click::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+      border-radius: 5px;
+      background:#4FD7DC;
+    }
+    #comTree_click::-webkit-scrollbar-track {/*滚动条里面轨道*/
+      border-radius: 5px;
+      background: rgba(0,0,0,0.1);
+    }
+
+
+.table-condensed tfoot{
+  display: none;
+}
+
+/* ----------------------------  组织机构  ------------- */
+
+.select_line{
+  width: 28%;
+  float: left;
+}
+.select-container{
+  float: left;
+  width: 26%;
+  margin-right: 1%;
+}
+
+.select-city{
+  width: 100%;
+  height: 28px;
+  background: #052438;
+  border: 1px solid #0C556C;
+  border-radius: 2px;
+  font-size: 12px;
+  color: #e9f1f1;
+  padding-left: 8px;
+}
+
+/* 小三角 */
+.sanjiao{
+	/* //穿透该层 */
+	pointer-events:none;
+}
+
+/* 加载中外层 */
+#loadingS{
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .5);
+  position: absolute;
+  top:0;
+  left: 0;
+  z-index: 9998;
+  text-align: center;
+}
+
+/* 加载中 */
+#loading{
+position: fixed;
+top: 41%;
+left: 40%;
+height: 80px;
+width: 400px;
+padding: 26px 0px;
+color: #6BD0CD;
+/* background: #001019; */
+background: rgba(0, 16, 25, .8);
+border: 1px solid #6BD0CD;
+font: normal bold 20px "微软雅黑";
+font-size: 20px;
+border-radius: 8px;
+font-weight:normal; /* 去除父类的  */
+}
+
+.LogList{
+  position: absolute;
+  top:5px;
+  left: 19%;
+  width: 80.5%;
+  height: 91px;
+  /* border: 1px solid #093f50; */
+  /* background-color: #093f50; */
+  border: 1px solid #0FFAFF;
+  background-color: rgba(36, 160, 157, 0.15);
+  border-radius: 4px;
+  /* padding-top: 8px;
+  padding-left: 5px;
+  padding-right: 5px; */
+}
+
+.datepRz{
+  /* width: 120px; */
+  margin-left: 4px;
+  
+}
+
+
+
+/* 111111111111111111111111111111 */
+/* 头部div */ 
+.leftTop{
+  width: 99%;
+  background-image: url('../css/img/top15.png');
+  /* background-size: cover; */
+  background-size: 100% 100%;
+  height: 69px;
+  font: normal bold 20px "微软雅黑";
+  color: #7AE9E5;
+  font-size: 26px;
+  position: absolute;
+  left: 0px;
+  top: 15px;
+  /* border: 1px solid #487180; */
+  border-top-right-radius:4px;
+  border-bottom-right-radius:4px;
+  margin-left:0.5%;
+}
+
+/* 左标题 */
+.picc-leftdiv{
+  float: left;
+  padding: 5px;
+  letter-spacing: 1px;
+  margin-left: 20px;
+  margin-top: 6px;
+}
+/* .picc-leftdiv:before{
+  content: '';
+  position: absolute;
+  width: 3px;
+  height: 47px;
+  top: 0px;
+  left: 0px;
+  border-top: 3px solid #79e8e4;
+  border-bottom: 3px solid #79e8e4;
+}
+.picc-leftdiv:after{
+  content: '';
+  position: absolute;
+  width: 3px;
+  height: 47px;
+  top: 0px;
+  left: 77px;
+  border-top: 3px solid #79e8e4;
+  border-bottom: 3px solid #79e8e4;
+} */
+/* .picc-leftdiv img{
+  padding-left: 5px;
+  width: 65px;
+  padding-top: 3px
+} */
+
+.ReturnDiv{
+  width: auto;
+  position: absolute;
+  right: 1.5%;
+  height: 28px;
+  cursor:pointer;
+  padding: 0px 14px;
+  top: 11px;
+  /* border: 1px solid #487180; */
+  /* width: 80px; */
+  }
+
+  .Returnspan{
+  color: #62C1BE;
+  font-size: 14px;
+  float: left;
+  margin-top: 3px;
+  margin-left: 8px;
+  }
+
+  .cursor{
+    cursor: pointer;
+  }
+  /* 设置拟态框 */
+  #myModalLabel, #SurveyModalLabel,#BangzhuLabel,#touchPoliceModalLabel,#StaffLoginModalLabel{
+    text-align: center;  
+  }
+
+  .modal-dialog{
+    width: 1150px;
+    /* color:#62C1BE; */
+    color: #0ffaff;
+  }
+  
+  .dialogBangZhu{
+    width: 850px;
+    color:#2fb3be;
+    margin: 5% auto;
+  }
+  .modal-header .close{
+    margin-top: 0px;
+    /* color:#62C1BE; */
+    color:#0FFAFF;
+    font-size: 26px;
+    opacity: 0.8;
+  }
+  .modal-header .close:hover{
+    opacity: 1;
+  }
+  .modal-header{
+    border: none;
+  }
+  .modal-body{
+    width: 96%;
+    /* background-color: #044A47; */
+    margin-left: 2%;
+    /* height: 90px; */
+    padding: 0px;
+    text-align:center;
+    /* max-height: 500px;
+    overflow: auto; */
+    }
+    .modalImdSpan{
+      height: 500px;
+      width: 100%;
+    }
+
+  /* 用户系统人员清单表单 */
+#currencyTable{
+  width: 100%;
+  color:rgba(255, 255, 255, 0.85);
+  font: normal bold 14px "微软雅黑";
+  background-color: rgba(4, 64, 61, 0.8);
+}
+#currencyTable thead{
+  color: #0ffaff;
+  font-size: 15px;
+}
+#currencyTable th{
+  /* border: 1px solid #2eabb1; */
+  border: none;
+}
+#currencyTable td{
+  vertical-align:middle;
+  padding: 9px;
+  font-size: 14px;
+  /* border: 1px solid #6BD0CD; */
+  /* border: 1px solid #2eabb1; */
+  /* border: 1px solid #0FFAFF; */
+  border: none;
+  text-align: center;
+}
+
+  /* 查勘车 */
+  #SurveycurrencyTable{
+    width: 100%;
+    color:rgba(255, 255, 255, 0.85);
+    font: normal bold 14px "微软雅黑";
+    background-color: rgba(4, 64, 61, 0.8);
+  }
+  #SurveycurrencyTable thead{
+    color: #0FFAFF;
+    font-size: 15px;
+  }
+  #SurveycurrencyTable th{
+    /* border: 1px solid #0FFAFF; */
+    border: none;
+  }
+  #SurveycurrencyTable td{
+    vertical-align:middle;
+    padding: 9px;
+    font-size: 14px;
+    /* border: 1px solid #6BD0CD; */
+    /* border: 1px solid #2eabb1; */
+    /* border: 1px solid #0FFAFF; */
+    border: none;
+    text-align: center;
+  }
+
+
+.modalImdSpan .fixed-table-container{
+  height: 89%;
+  
+}
+.modalImdSpanBang{
+  /* height: 80%; */
+  height: 360px;
+  width: 100%;
+  text-align: left;
+  border-radius: 4px;
+  background-color: #0c433f;
+  padding: 5px;
+  color: #2fb3be;
+}
+.modal-content{
+  /* background-color: #395a5a; */
+  background-color: rgba(5, 32, 32,.9);
+  background-color: #05252E;
+}
+/* 下载的img */
+.downloadImg{
+  position: absolute;
+  width: 24px;
+  right: 45px;
+  cursor: pointer;
+}
+
+.change_div{
+  position: absolute;
+  left: 19%;
+  width: 80.5%;
+  height: 97%;
+  border: 1px solid #487180;
+  top: 5px;
+  border-radius: 4px;
+}
+/* 服务记录仪上线率 主窗口 */
+/* .serveRecord_main{
+  display: none;
+} */
+
+/* 人员服务记录仪上线率 副窗口 */
+.serveRecord_accessory{
+  display: none;
+}
+#serveRecord_div{
+  width: 98%;
+  margin-left: 1%;
+  margin-top: 10px;
+  float: left;
+  
+}
+#serveRecord_div span{
+  font-size: 20px;
+  color:#62C1BE;
+}
+
+#serveRecord_div hr{
+  padding: 0px;
+  margin: 0px;
+  border-color: #487180;
+}
+
+.serveRecord_Table{
+  /* border: 1px solid #62C1BE; */
+  float: left;
+  width: 98%;
+  margin-left: 1%;
+  height: calc(100% - 90px);
+}
+.serveRecord_centerDiv{
+  position: absolute;
+}
+.right_160px{
+  right: 160px;
+}
+
+.right_350px{
+  right: 420px;
+}
+#serveRecord_back{
+  position: absolute;
+  right: 25px;
+  cursor: pointer;
+}
+.preLine_span{
+  overflow-wrap: break-word;
+  white-space:normal;
+  width: 100%;
+}
+
+.bangzhu{
+  width: 27px;
+  margin-left: 8px;
+  cursor: pointer;
+}
+
+.TableTitle{
+  width: 100%;
+  /* height: 40px;  */
+  /* border: 1px solid #093f50; */
+  border: 1px solid #0FFAFF;
+  /* border-bottom: none; */
+  text-align: center;
+  font-size: 18px;
+  color: #0FFAFF;
+  padding-bottom: 10px;
+  border-bottom: none;
+  background-color: rgba(78, 144, 142, 0.1);
+}
+.TableTitle_span{
+  width: 330px;
+  height: 30px;
+  padding: 5px 0px;
+  margin: 0px auto;
+  background-image: url('./img/rectangle.png');
+  background-size: 100% 100%;
+}
+
+.homepage_survey{
+  display: block;
+}
+.Subpage_survey{
+  display: none;
+}
+
+.homepage_login{
+  display: block;
+}
+
+.Subpage_login{
+  display: none;
+}
+/* 人员页 返回 公司的 */
+.Timeout_Return{
+  width: 16px;
+  /* float: right;
+  margin-top: 3px;
+  margin-right: 8px; */
+  position: absolute;
+  right: 16px;
+  top: 12px;
+  cursor: pointer;
+}
+
+/* 设置表 */
+#personnelSurveyTimeoutTable{
+  width: 100%;
+  color:#0FFAFF;
+  font: normal bold 14px "微软雅黑";
+  border-top: none !important;
+}
+#personnelSurveyTimeoutTable thead{
+  color: #2fb3be;
+  font-size: 15px;
+}
+#personnelSurveyTimeoutTable td{
+  vertical-align:middle;
+  padding: 10px;
+  font-size: 14px;
+  /* border: 1px solid #6BD0CD; */
+  /* border: 1px solid #0c485d; */
+  /* border: 1px solid #0FFAFF; */
+  border: none;
+  text-align: center;
+}
+
+/* 设置表  总公司登录量*/
+#LoginAmountTable{
+  width: 100%;
+  color:#0FFAFF;
+  font: normal bold 14px "微软雅黑";
+  border-top: none !important;
+}
+#LoginAmountTable thead{
+  color: #0FFAFF;
+  font-size: 15px;
+}
+#LoginAmountTable td{
+  vertical-align:middle;
+  padding: 10px;
+  font-size: 14px;
+  /* border: 1px solid #6BD0CD; */
+  /* border: 1px solid #0c485d; */
+  /* border: 1px solid #0FFAFF; */
+  border: none;
+  text-align: center;
+}
+
+/* 设置表  人员登录量*/
+#staffLoginAmountTable{
+  width: 100%;
+  color:#0FFAFF;
+  font: normal bold 14px "微软雅黑";
+  border-top: none !important;
+  margin-top: -1px;
+}
+#staffLoginAmountTable thead{
+  color: #0FFAFF;
+  font-size: 15px;
+}
+#staffLoginAmountTable td{
+  vertical-align:middle;
+  padding: 10px;
+  font-size: 14px;
+  /* border: 1px solid #6BD0CD; */
+  /* border: 1px solid #0c485d; */
+  /* border: 1px solid #0FFAFF; */
+  border: none;
+  text-align: center;
+}
+.bootstrap-table .table > thead > tr > th{
+  /* border: 1px solid #0FFAFF; */
+  border: none;
+}
+
+
+
+  /* 第一级总触警 */
+  #touchPoliceTable{
+    width: 100%;
+    color:#0FFAFF;
+    font: normal bold 14px "微软雅黑";
+    background-color: rgba(4, 64, 61, 0.8);
+  }
+  #touchPoliceTable thead{
+    color: #0FFAFF;
+    font-size: 15px;
+  }
+  #touchPoliceTable th{
+    border: 1px solid #2eabb1;
+    word-wrap:break-word
+  }
+  #touchPoliceTable td{
+    vertical-align:middle;
+    padding: 9px;
+    font-size: 14px;
+    /* border: 1px solid #6BD0CD; */
+    /* border: 1px solid #2eabb1; */
+    border: 1px solid #0FFAFF;
+    text-align: center;
+    word-wrap:break-word
+  }
+
+  
+
+  
+  /* 人员登录量列表清单 */
+  #StaffLoginTable{
+    width: 100%;
+    color:#0FFAFF;
+    font: normal bold 14px "微软雅黑";
+    /* background-color: rgba(4, 64, 61, 0.8); */
+    background-color: rgba(36, 160, 157, 0.15);
+  }
+  #StaffLoginTable thead{
+    /* color: #2fb3be; */
+    color: #0FFAFF;
+    font-size: 15px;
+  }
+  #StaffLoginTable th{
+    /* border: 1px solid #2eabb1; */
+    border: none;
+    word-wrap:break-word
+  }
+  #StaffLoginTable td{
+    vertical-align:middle;
+    padding: 9px;
+    font-size: 14px;
+    /* border: 1px solid #6BD0CD; */
+    /* border: 1px solid #2eabb1; */
+    /* border: 1px solid #0FFAFF; */
+    border: none;
+    text-align: center;
+    word-wrap:break-word
+  }
+  
+  /* 四边的图标  上左*/
+  .UpperLeftImg{
+    position: absolute;
+    left: -2px;
+    top: -2px;
+  } 
+  /* 四边的图标 上右 */
+  .UpperRightImg{
+    position: absolute;
+    right: -2px;
+    top: -2px;
+  }
+  /* 四边的图标  下左*/
+  .LowerLeftImg{
+    position: absolute;
+    left: -2px;
+    bottom: -2px;
+  }
+  /* 四边的图标 下右 */
+  .lowerRightIMg{
+    position: absolute;
+    right: -2px;
+    bottom: -2px;
+  }
+
+  .LogList_X2{
+    width: 100%;
+    height: 45px;
+    /* padding: 0px 15px; */
+    /* padding: 0px 1%; */
+  }
+
+  #Level_LogList,#mainSelect,#usercode,#username{
+    width: 160px;
+    color: #0FFAFF;
+  }
+  #Level_LogList,#mainSelect{
+    margin-left: 6px;
+  }
+
+  .LogListBtn{
+    float: right;
+    /* padding-left: 1%; */
+    /* padding-right: 5px; */
+    text-align: center;
+    width: 5%;
+    height: 45px;
+    border-left: 1px solid #0FFAFF;
+    color: #0FFAFF;
+  }
+  .icostyle{
+    font-size: 21px;
+    color: #0FFAFF;
+    position: relative;
+    top: 8px;
+    cursor: pointer;
+  }
+
+  /* //关闭的 */
+  .Icon_close{
+    font-size: 18px;
+    color: #0FFAFF;
+  }
+  .Icon_download{
+    position: absolute;
+    right: 50px;
+    top: 10px;
+    cursor: pointer;
+    color: #0FFAFF;
+    font-size: 28px;
+  }
+/* 设置1660的显示 适配的设置 */
+@media screen and (min-width: 1650px) {
+  .picc-leftdiv{
+    margin-left: 25px;
+    margin-top: 6px;
+    font-size: 28px;
+  }
+  .tab-header{
+    margin-left: 102px;
+  }
+  .tab-header li{
+    margin: 2px 80px;
+  }
+  .ReturnBtn {
+    margin-top: 22px;
+  }
+
+}
+
+/* 设置1920的显示 适配的设置 */
+  @media screen and (min-width: 1910px) {
+    .leftTop{
+      height: 96px;
+    }
+    .picc-leftdiv{
+      margin-left: 30px;
+      margin-top: 14px;
+      font-size: 32px;
+    }
+    .piccCenter{
+      top: 105px;
+      height: calc(100% - 115px);
+    }
+    .tab-header{
+      margin-top: 60px;
+      margin-left: 180px;
+      font-size: 18px;
+    }
+    .tab-header li{
+      margin: 2px 80px;
+    }
+    .ReturnBtn{
+      margin-top: 32px;
+    }
+
+}
