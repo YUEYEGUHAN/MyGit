@@ -1,0 +1,540 @@
+html,body{
+    width: 100%;
+    height: 100%;
+    background: #052438;
+    font-family:"微软雅黑";
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+select{
+    appearance:none;
+    -moz-appearance:none;
+    -webkit-appearance:none; /* Safari 和 Chrome */
+
+}
+.topnav{
+    height: 7%;
+    line-height: 45px;
+    padding-left: 30px;
+    font-size: 26px;
+    color: #FFFFFF;
+    background-image: linear-gradient(-46deg, #196C79 0%, #2B93A3 100%);
+    box-shadow: 0 8px 16px 0 #02131F;
+}
+.zj-container{
+    position: absolute;
+    top: 50px;
+    right: 0;
+    left: 0;
+    background: #052438;
+    padding: 12px 10px;
+    display: flex;
+    box-sizing: border-box;
+    height: 92%;
+}
+.left-container{
+    margin-right: 10px;
+}
+.right-container{
+    /* width: calc(100% - 251px); */
+    width: 100%;
+}
+.rtr-container{
+    width: 228px;
+}
+.left-panel{
+    width:280px;
+    height:49%;
+    background: #073949;
+    box-shadow: 8px 8px 16px 0 rgba(2,19,31,0.50);
+    border-radius: 8px;
+}
+.left-panel:first-child{
+    margin-bottom: 10px;
+}
+.title{
+    font-size: 16px;
+    height: 40px;
+    line-height: 32px;
+    padding-left: 15px;
+    color: #e9f1f1;
+    border-bottom: 2px solid #007A7E;
+    padding-top: 3px;
+}
+.line1{
+    margin: 0 20px 3px 20px;
+}
+.line-title1{
+    font-size: 12px;
+    color: #4FD7DC;
+}
+.line1 div{
+    font-size: 16px;
+    color: #e9f1f1;
+    letter-spacing: 0;
+    text-align: right;
+    padding: 3px 0px;
+}
+.line1 div samp{
+    font-size: 12px;
+    color: #8fdbdd;
+    font-family: "微软雅黑";
+	margin-left:1px;
+}
+
+.chart-container{
+    border-top: 2px solid #007A7E;
+    margin: 0 20px;
+    height: 24%;
+}
+.chart{
+    height: 100%;
+}
+
+.rt-container{
+    display: flex;
+    justify-content: space-between;
+    width:100%;
+	height: 290px;
+}
+.rtl-container{
+    width: calc(100% - 238px);
+    padding: 10px 20px 0 20px;
+    background: #073949;
+    box-shadow: 8px 8px 16px 0 rgba(2,19,31,0.50);
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    /* height: 240px; */
+}
+.rtll-container{
+    margin-right: 10px;
+    width: 47%;
+}
+.rtlr-container{
+    /* width: calc(100% - 430px); */
+    width: 47%;
+}
+.select-line{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    align-items: center;
+    color: #FFFFFF;
+}
+.line-text .line-title1{
+    width: 100%;
+    margin-bottom: 5px;
+}
+.select-container{
+    position: relative;
+    margin-right: 5px;
+}
+.rtlr-container .select-container{
+    width: 100%;
+}
+.select-container img{
+    position: absolute;
+    right: 9.5px;
+    top: 12px;
+}
+.spancolor{
+	color: #4fd7dc;
+	margin-right: 5px;	
+}
+
+
+
+.select-city,.select-city5{
+    width: 100%;
+    height: 28px;
+    background: #0C566D;
+    border: 1px solid #1F8082;
+    border-radius: 4px;
+    font-size: 12px;
+    color: #e9f1f1;
+    padding-left: 8px;
+}
+.select32{
+    width: 32%;
+}
+.select48{
+    width: 48.5%;
+}
+.select45{
+    width: 45%;
+}
+
+.select-city5{
+    border: 1px solid #0C566D;
+}
+.btns{
+    width: 225px;
+    height: 75px;
+    box-shadow: 8px 8px 16px 0 rgba(2,19,31,0.50);
+    border-radius: 8px;
+    border: none;
+    font-size: 22px;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+}
+.btn1{
+    background-image: linear-gradient(-135deg, #3C41BD 0%, #23238A 100%);
+}
+.btn2{
+    background-image: linear-gradient(-135deg, #168729 0%, #085B15 100%);
+}
+.rtr-container .select-container{
+    width: 226px;
+}
+.rb-container{
+    margin-top: 10px;
+    height: 61%;
+    /* height: 400px; */
+}
+.fixed-table-container thead th .th-inner{
+    white-space: normal;
+    /* width: 76px; */
+    width: 100%;
+    /* padding: 1px; */
+    word-wrap: break-word;
+    word-break: break-all;
+    overflow: hidden;
+}
+#table,.bootstrap-table .table>thead>tr>th,.fixed-table-container,#table tbody td{
+    border: none;
+}
+/*最小屏幕分辨率为1280px且最大为1440px*/
+@media (min-width: 1280px) and (max-width:1440px){
+	.rb-container{
+        height: 61%;
+    }
+}
+/*最小屏幕分辨率为1440px且最大为1680px*/
+@media (min-width: 1440px) and (max-width:1680px){
+	.rb-container{
+        height: 66%;
+    }
+}
+/*最小屏幕分辨率为1920px*/
+@media screen and (min-width:1920px){
+	.rb-container{
+        height: 72%;
+    }
+    .bootstrap-table .table:not(.table-condensed), 
+    .bootstrap-table .table:not(.table-condensed)>tbody>tr>td, 
+    .bootstrap-table .table:not(.table-condensed)>tbody>tr>th, 
+    .bootstrap-table .table:not(.table-condensed)>tfoot>tr>td, 
+    .bootstrap-table .table:not(.table-condensed)>tfoot>tr>th, 
+    .bootstrap-table .table:not(.table-condensed)>thead>tr>td{
+        padding: 14px;
+    }
+}
+
+.bootstrap-table{
+	height: 100%;
+}
+
+#table tr:nth-child(even) {
+    font-size: 12px;
+    color: #86D2DB;
+    background: #083847;
+    height: 50px;
+
+}
+#table tr:nth-child(odd) {
+    font-size: 12px;
+    color: #86D2DB;
+    background: #093F50;
+    height: 53px;
+}
+#table th{
+    font-size: 12px;
+    color: #4FD7DC;
+    background: #073949;
+    height: 64px;
+}
+.fixed-table-container{
+    height: 100%; 
+}
+
+.fixed-table-body{
+    border-radius: 8px;
+}
+/* 表格的 */
+.fixed-table-body::-webkit-scrollbar {/*滚动条整体样式*/
+	width: 4px;     /*高宽分别对应横竖滚动条的尺寸*/
+	height: 4px;
+}
+.fixed-table-body::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+	border-radius: 5px;
+	background:#4FD7DC;
+}
+.fixed-table-body::-webkit-scrollbar-track {/*滚动条里面轨道*/
+	border-radius: 5px;
+	background: rgba(0,0,0,0.1);
+}
+
+/* 时间控件 */
+.datepicker{
+	z-index: 999 !important;
+}
+.dropdown-menu{
+    background-color: rgba(7, 57, 73, .9);
+}
+
+.datepicker td, .datepicker th{
+    color: #e9e9e9;
+}
+.datepicker table tr td.active.active{
+    background-color: rgba(7, 57, 73, .9);
+    /* background-image: -webkit-gradient(linear,0 0,0 100%,from(#052438),to(#052438)); */
+}
+.datepicker-dropdown.datepicker-orient-top:after{
+    border-top: 6px solid rgba(7, 57, 73, .9);
+}
+.datepicker table tr td.day:hover{
+    background: #278999;
+}
+.datepicker .datepicker-switch:hover, .datepicker .next:hover, .datepicker .prev:hover, .datepicker tfoot tr th:hover{
+	background: rgba(156, 156, 156, 0.3);
+}
+html::-webkit-scrollbar {/*滚动条整体样式*/
+	width: 4px;     /*高宽分别对应横竖滚动条的尺寸*/
+	height: 4px;
+}
+html::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+	border-radius: 5px;
+	background:#4FD7DC;
+}
+html::-webkit-scrollbar-track {/*滚动条里面轨道*/
+	border-radius: 5px;
+	background: rgba(0,0,0,0.1);
+}
+
+
+.fixed-table-pagination .pagination-info {
+	color: #86D2DB;
+}
+.fixed-table-loading{
+	background-color: #073949;
+	color: #86D2DB;
+	overflow:hidden;
+		padding-top: 16px;
+}
+
+.inputSS{
+    margin-bottom: 10px;
+    width: 226px;
+}
+
+.searchInput{
+    height: 28px;
+    padding: 6px 8px;
+    background: #0C566D;
+    border: 1px solid #0C566D;
+    color: #FFFFFF;
+    border-right: none;
+    font-size: 12px;
+}
+.searchImg{
+    padding: 0px 8px;
+    height: 28px;
+    background: #0C566D;
+    border: 1px solid #0C566D;
+    border-left: none;
+}
+/* //去除input的聚焦时边框的颜色 */
+/* .form-control:focus{
+	border:none;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 0px rgba(102, 175, 233, .6);
+   	box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 0px rgba(102, 175, 233, .6);
+} */
+input:focus { outline: none; }
+/*修改提示文字的颜色*/
+
+.searchInput::-webkit-input-placeholder { /* WebKit browsers */ 
+    color: #e9e9e9; 
+    font-size: 12px;
+} 
+.searchInput:-moz-placeholder { /* Mozilla Firefox 4 to 18 */ 
+    color: #e9e9e9; 
+    font-size: 12px;
+} 
+
+.searchInput::-moz-placeholder { /* Mozilla Firefox 19+ */ 
+    color: #e9e9e9; 
+    font-size: 12px;
+} 
+.searchInput:-ms-input-placeholder { /* Internet Explorer 10+ */ 
+    color: #e9e9e9; 
+    font-size: 12px;
+} 
+.chartspan1{
+    position: absolute;
+    color: #8fdbdd;
+    margin-top: 3%;
+    margin-left: 0px;
+    font-size: 15px;
+}
+.chartspan2{
+    position: absolute;color: #8fdbdd;margin-top: 3%;margin-left: 120px;font-size: 15px;
+}
+
+.money{
+	width: 100px;
+	margin-right: 3px;
+}
+.registno{
+    padding-right: 22px;
+}
+.registnoSpan{
+	overflow: hidden; 
+	text-overflow: ellipsis; 
+	-o-text-overflow: ellipsis;
+	white-space:nowrap;
+	display:block;
+	width:97%;
+	cursor:pointer;
+	color:#e9e9e9;
+}
+.registnoSpan:hover{
+	text-overflow: ellipsis; 
+	-o-text-overflow: ellipsis;
+	display:block;
+	cursor: pointer;
+    word-wrap: break-word;
+    word-break: break-all;
+    overflow: hidden;
+    white-space:normal;
+}
+.huanghSpan{
+	text-overflow: ellipsis; 
+	-o-text-overflow: ellipsis;
+	display:block;
+	cursor: pointer;
+    word-wrap: break-word;
+    word-break: break-all;
+    overflow: hidden;
+    width: 60px;
+}
+.contentSpan{
+	overflow: hidden; 
+	text-overflow: ellipsis; 
+	-o-text-overflow: ellipsis;
+	white-space:nowrap;
+	display:block;
+	width:97%;
+	cursor:pointer
+}
+
+.btn-default{
+	color: #8fdbdd;
+    background-color: #083847;
+    border-color: #8fdbdd;
+}
+.btn-default:hover{
+	color: #eee;
+    background-color: #06636f;
+    border-color: #eee;
+}
+.pagination > li > a, .pagination > li > span{
+	color: #8fdbdd;
+    background-color: #083847;
+    border: 1px solid #8fdbdd;
+}
+.datepicker table tr td span.focused, .datepicker table tr td span:hover{
+	background: #0c5369;
+}
+.pagination > li > a:hover, .pagination > li > span:hover, .pagination > li > a:focus, .pagination > li > span:focus{
+	color: #eee;
+    background-color: #06636f;
+    border-color: #eee;
+}
+.pagination > .disabled > a{
+	background-color: #0a475a;
+}
+.fixed-table-pagination .page-list{
+	color:#86D2DB;
+}
+.pagination{
+	margin: 5px 0px;
+}
+.fixed-table-pagination .pagination-detail, .fixed-table-pagination div.pagination{
+	    margin-bottom: 0px;
+}
+.dropdown-menu > li > a{
+	color: #eee;
+}
+/* 小三角 */
+.sanjiao{
+	/* //穿透该层 */
+	pointer-events:none;
+}
+/* th:last-child 指定属于其父元素的最后一个子元素 */
+/* #table th:last-child .th-inner{
+	width:70px;
+} */
+/* 规定属于其父元素的第二个子元素的每个 p 元素，从最后一个子元素开始计数 th:nth-last-child(7)倒数第7个 */
+/* #table th:nth-last-child(7) .th-inner{
+	width:60px;
+}
+#table th:nth-last-child(6) .th-inner{
+	width:61px;
+}
+#table th:nth-last-child(5) .th-inner{
+	width:65px;
+}
+#table th:nth-last-child(4) .th-inner{
+	width:60px;
+} */
+/* 返回 */
+.ReturnDiv{
+	float: right;
+	margin-right: 15px;
+    height: 30px;
+    padding: 5px;
+    margin-top: 10px;
+    cursor: pointer;	
+}
+.Returnimg{
+	width: 14px;
+	float: left;
+}
+.Returnspan{
+	color: #7ae9e5;
+	font-size: 16px;
+	float: left;
+	margin-top: -14px;
+    margin-left: 5px;
+}
+.closes{
+    color: #FFFFFF;
+    position: absolute;
+    z-index: 999;
+    right: 36px;
+    cursor: pointer;
+    margin-top: 3px;
+    display: none;
+}
+.closes1{
+    color: #FFFFFF;
+    position: absolute;
+    z-index: 999;
+    right: 36px;
+    cursor: pointer;
+    margin-top: 3px;
+    display: none;
+}
+
+.Ausercode{
+    float: right;
+    margin-right: 30px;
+    color: #7ae9e5;
+    cursor: pointer;
+    font-size: 18px;
+}

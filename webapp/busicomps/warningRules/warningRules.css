@@ -1,0 +1,1373 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+html{
+    width: 100%;
+    height: 100%;
+}
+body{
+    width:100%;
+    height:100%;
+    background-image:url("lib/images/BackgroundMaps.png");
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-color:  rgba(0, 0, 0, 0);
+}
+/* 整体 */
+.picc{
+    width: 97%;
+    margin-left: auto;
+    margin-right: auto;
+}
+img {
+    vertical-align: unset;
+}
+/* 头部整体 */
+.entiretyTop{
+    width: 100%;
+    position:relative;
+   top: 0px;
+   height: 70px;
+}
+/* 中部整体 */
+.entiretyCenter{
+    width: 100%;
+    /* height: calc(100% - 30px); */
+    height: 100%;
+    position:relative;
+    border: 1px solid #487180;
+    border-radius: 4px;
+}
+/* 头部左div */ 
+.leftTop{
+    width: 100%;
+    height: 48px;
+    /* background-color: #062020; */
+    /* border: 1px solid #7AE9E5; */
+    font: normal bold 20px "微软雅黑";
+    color: #7AE9E5;
+    font-size: 28px;
+    position: absolute;
+    left: 0px;
+    top: 20px;
+    border: 1px solid #487180;
+    border-top-right-radius:4px;
+    border-bottom-right-radius:4px;
+}
+/* 控件的树状图 */
+.ztree{
+background: none;
+color: #6BD0CD;
+width: 100%;
+height: 100%;
+border: none;
+padding: 10px;
+margin: 0px;
+}
+.ztree * {
+font: normal bold 14px "微软雅黑";
+font-size: 14px;
+}
+.ztree li{
+padding-top: 2px;
+}
+.ztree li a {
+/* color: rgb(91,181,179); */
+text-decoration : none;
+color: #62C1BE;
+}
+.ztree li a:hover{
+color: #ffffff;
+}
+.ztree li span{
+letter-spacing: 1px;
+margin-left: 3px;
+}
+.ztree li a.curSelectedNode{
+border: none;    
+background-color: rgba(35, 21, 21, 0);
+color: #ffffff;
+opacity: 1;
+}
+.ztree li span.button.switch {
+margin-right: 3px;
+}
+/* 左标题 */
+.picc-leftdiv,.picc-leftdiv1{
+    float: left;
+    padding: 5px;
+    letter-spacing: 1px;
+}
+.picc-leftdiv:before{
+    content: '';
+    position: absolute;
+    width: 3px;
+    height: 47px;
+    top: 0px;
+    left: 0px;
+    border-top: 3px solid #79e8e4;
+    border-bottom: 3px solid #79e8e4;
+}
+.picc-leftdiv:after{
+    content: '';
+    position: absolute;
+    width: 3px;
+    height: 47px;
+    top: 0px;
+    left: 77px;
+    border-top: 3px solid #79e8e4;
+    border-bottom: 3px solid #79e8e4;
+}
+/* 头部右div */
+/* .rightTop{
+    width: 220px;
+    font: normal bold 20px "微软雅黑";
+    font-size: 20px;
+    color: #7AE9E5;
+    position: absolute;
+    right: 0px;
+    top: 20px;
+    background-color:rgba(2, 27, 41, .1);
+    border: 1px solid #487180;
+} */
+/* 右标题 */
+/* .picc-rightDiv{
+    position: absolute;
+    top: 4px;
+    left: 55px;
+    letter-spacing: 18px;
+} */
+/* 中部左div */
+.leftCenter{
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    /* width: 250px; */
+    width: 17%;
+    height: 96%;
+    font: normal bold 20px "微软雅黑";
+    text-align: left;
+}
+/* 中部右div */
+.rightCenter{
+    position: absolute;
+    left: 19%;
+    top: 10px;
+    width: 80%;
+    height:calc(100% - 30px);
+    text-align: left;
+}
+
+
+/* 中部两个标题 */
+.titleCenter{
+    width: 100%;
+    font: normal bold 16px "微软雅黑";
+    font-size: 16px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: #ffffff;
+    margin-left: -1px;
+    /* background-color: #044A47; */
+    /* border: 1px solid #0F6665; */
+    float: left;
+    letter-spacing:1px;
+    border-radius: 2px; /* 圆角*/
+
+    background-color: rgba(10, 39, 51, .9);
+    border: 1px solid #0c485d;
+}
+.spanTitleCenter{
+    margin-left: 25px !important;
+}
+/* 总公司下 内容 */
+.listLeftCenter{
+    float: left;
+    width: 100%;
+    overflow: hidden;/*内容不能超出div*/
+    overflow-y: auto;/*内容多于div高度时，出现滚动条*/
+    overflow-x: auto;/*内容多于div宽度时，出现滚动条*/
+    margin-left: -1px;
+    margin-top: 1px;
+    /* border: 1px solid #0F6665; */
+    font: normal bold 14px "微软雅黑";
+    font-size:14px;
+    /* background: rgba(5,38,28,.5); */
+    border-radius: 2px; /* 圆角*/
+    height: 93%;
+    letter-spacing:1px;
+
+    background-color: rgba(78, 144, 142, 0.1);
+    border: 1px solid #0c485d;
+}
+/* 地址下 内容 */
+.listRightCenter{
+    float: left;
+    width: 100%;
+    margin-left: -1px;
+    margin-top: 1px;
+    font: normal bold 14px "微软雅黑";
+    border-radius: 2px; /* 圆角*/
+    border: 1px solid #0F6665;
+    height: 81%;
+    letter-spacing:1px;
+    text-align: center;
+    background-color: rgba(78, 144, 142, 0.1);
+    overflow-y: auto;
+}
+
+/*设置树状图 滚动条样式*/
+.listRightCenter::-webkit-scrollbar {/*滚动条整体样式*/
+width: 4px;     /*高宽分别对应横竖滚动条的尺寸*/
+height: 4px;
+}
+.listRightCenter::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+border-radius: 5px;
+background:#4FD7DC;
+}
+.listRightCenter::-webkit-scrollbar-track {/*滚动条里面轨道*/
+border-radius: 5px;
+background: rgba(0,0,0,0.1);
+}
+
+.formsCenter{
+    display: inline-block;
+    width:100%;
+}
+.surveyDiv{
+	margin: 0px auto;
+    display: inline-block;
+}
+.surveySpan{
+	width: 120px;
+    border-left: 2px solid #fff;
+    background-color: rgba(23, 59, 74, 0.8);
+    padding: 2px 0px;
+    margin-top: 10px;
+}
+.leftFormsCenter{
+    width: 190px;
+    text-align: right;
+    float: left;
+}
+.leftFormsCenterForOther{
+    width: 140px;
+    text-align: right;
+    float: left;
+}
+/* 文本 div*/
+.rightFormsCenter{
+    width: 200px;
+    float: left;
+    text-align: left;
+}
+.rightFormsCenterForOther{
+    width: 160px;
+    float: left;
+    text-align: left;
+}
+/*输出框前的标题  */
+.spanFormsCenter{
+    display:block;
+    /* color: #78E6E2; */
+    color: #62C1BE;
+    width: 185px;
+    font-size: 14px;
+    margin-top: 5px;
+    padding: 7px 5px;
+}
+.spanFormsCenterForOther{
+    display:block;
+    /* color: #78E6E2; */
+    color: #62C1BE;
+    width: 100px;
+    font-size: 14px;
+    margin-top: 5px;
+    padding: 7px 5px;
+}
+.textFz{
+    color:rgb(91,181,179);
+    font-size: 14px;
+    position: relative;
+}
+.HeadquartersImg,.HeadquartersImgTozhi{
+    padding: 6px 0px;
+}
+#tree{
+    box-sizing: border-box;
+    padding: 5px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+/* 设置输入框 */
+.inputText1{
+    width: 150px;
+    height: 25px;
+    font-size: 16px;
+    margin: 7px 0px;
+    padding: 0px 8px;
+    background:rgba(0, 0, 0, 0);
+    color:#6BD0CD;
+    border-radius: 2px;
+    border: 1px solid #3ea3a7;
+}
+.inputText{
+    width: 150px;
+    height: 25px;
+    font-size: 16px;
+    margin: 7px 0px;
+    padding: 0px 8px;
+    background:rgba(0, 0, 0, 0);
+    color:#6BD0CD;
+    border-radius: 2px;
+    border: 1px solid #3ea3a7;
+}
+
+/* 保存按钮 */
+.buttonOk{
+    position: absolute;
+    left: 58%;
+    bottom: 10px;
+    width: 100px;
+    height: 32px;
+    border:1px solid #79EBE7;
+    border-radius: 2px;
+    cursor:pointer; /*小手*/
+    text-align: center;
+
+    background-color: rgba(8, 29, 36, 0.6);
+}
+/* 按钮的字体 */
+.buttonSpan{
+    display: block;
+    color: #EFBB42;
+    letter-spacing: 5px;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin-top: 5px;
+}
+/* 查询按钮 */
+.btn_query{
+    font: normal bold 13px "微软雅黑";
+    color: #7AE9E5;
+    border-radius: 2px;
+    background-color: rgba(0, 0, 0, 0);
+    margin-top: 10px;
+    width: 80px;
+    height: 26px;
+    outline: none;
+    border: 1px solid #3ea3a7;
+}
+.btn_query:hover{
+    background-color: #0F4949;
+}
+
+.buttonOk:hover{
+    background-color: #0F4949;
+}
+.picc-leftdiv img{
+    padding-left: 5px;
+    width: 65px;
+    padding-top: 3px
+}
+/* 三角画线 左 */
+/* .jiao{
+position: relative;
+height: 0px;
+width: 0px;
+border-top: 49px solid transparent;
+border-bottom: 0px solid transparent;
+left: 260px;
+top: -1px;
+
+border-right: 49px solid #487180;
+}
+.jiao:after{
+content: '';
+position: absolute;
+top: -50px;
+left: 1px;
+border-top: 51px solid transparent;
+border-right: 51px solid #001019;
+border-bottom: 0px solid #001019;
+} */
+span{
+white-space: nowrap;
+}
+.province,.city,.county{
+margin-left: 10px;
+margin-right: 5px;
+}
+.Headquarters{
+list-style: none;
+padding: 5px;
+margin-left: 10px;
+margin-top: 10px;
+}
+.Subsidiary,.SubsidiaryTozhi{
+list-style:none;
+padding-top: 5px;
+padding-left: 5px;
+margin-left: 15px;
+}
+.Subsidiary1,.SubsidiaryTozhi1{
+list-style:none;
+padding-top: 5px;
+padding-left: 5px;
+margin-left: 15px;
+display: none;
+}
+.cursor{
+cursor:pointer; /*小手*/
+}
+
+.TozhirightCenter{
+    position: absolute;
+    top: 10px;
+    left: 19%;
+    width: 80%;
+    height: 90px;
+    border: 1px solid #0c485d;
+    background-color: rgba(78, 144, 142, 0.1);
+    border-radius: 4px;
+}
+/* 下拉列表 */
+.TozhiSelect{
+    color: #6BD0CD;
+    margin-top:11px;
+    border: 1px solid #3ea3a7;
+    background: rgba(0, 0, 0, 0);
+    border-radius: 2px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding-left: 5px;
+    cursor:pointer;
+}
+.DIV-TozhiSelect{
+    width: 14px;
+    height: 8px;
+    background: url(lib/images/dropdown.png) no-repeat center;
+    position: absolute;
+    top: 24%;
+    margin-left: 226px;
+    pointer-events: none;
+}
+
+/*********** 表单切换 **********/
+
+.tab-header{
+    height: 31px;
+    text-align: center;
+    font-size: 14px;
+    width: 30%;
+    margin: 0px;
+}
+
+.tab-header li{
+    list-style-type: none;
+    float: left;
+    width: 31%;
+    line-height: 30px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.tab-header2{
+    height: 31px;
+    text-align: center;
+    font-size: 14px;
+    width: 50%;
+    margin: 0px;
+}
+
+.tab-header2 li{
+    list-style-type: none;
+    float: left;
+    /* width: 31%; */
+    line-height: 30px;
+    cursor: pointer;
+    padding: 0px 12px;
+    border-radius: 4px;
+}
+
+.first-li{
+/* border:1px  solid #62C1BE; */
+color: #62C1BE;
+
+border: 1px solid #487180;
+}
+.second-li{
+margin-left: 10px;
+/* border:1px  solid #62C1BE; */
+color: #62C1BE;
+
+border: 1px solid #487180;
+border-radius: 4px;
+}
+.contentSpan{
+overflow: hidden; 
+text-overflow: ellipsis; 
+-o-text-overflow: ellipsis;
+white-space:nowrap;
+display:block;
+width:97%;
+cursor:pointer
+}
+.content{
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.content2{
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+/*控制列表选项卡活动状态时的背景颜色*/
+.active{
+color: #ffffff;
+}
+
+.m-box{
+height: 100%;
+}
+/*控制列表切换内容的显示与隐藏*/
+.first-content, .second-content{
+display: none;
+}
+.first-content.active, .second-content.active {
+display: block;
+}
+/* 列表的 */
+.Tozhi-centerDIv{
+    float: left;
+    width: 27%;
+    margin-left: 2%;
+    text-align: left;
+    height: 45px;
+    border-right: 1px solid #0c485d;
+}
+.Tozhi-centerSpan{
+    font: normal bold 13px "微软雅黑";
+    font-size: 14px;
+    color: #2fb3be;
+}
+/* 输入框 */
+.TozhiText{
+    width: 175px;
+    height: 25px;
+    outline: none;
+    margin-top:10px;
+}
+/* 下拉列表 option*/
+.TozhiSelect option{
+background: rgb(8, 29, 36);
+}
+.Tozhi-table{
+position: absolute;
+top: 115px;
+left: 19%;
+width: 80%;
+height: 74%;
+}
+.tableTozhi{
+border: 1px solid #0F6665;
+color: #7AE9E5;
+font-size: 14px;
+}
+.tableTozhi th,.tableTozhi td{
+text-align: center;
+border: 1px solid #0F6665 !important;
+padding: 5px !important;
+}
+/* 分页的 */
+#pageLimit{
+position: absolute;
+right: 10px;
+bottom: -10px;
+}
+.pagination > .active > a{
+background-color: #065656; 
+border-color: #7AE9E5;
+color: #7AE9E5;
+cursor:pointer; /*小手*/
+}
+.pagination > li > a{
+background-color: rgba(0, 0, 0, 0);
+color: #7AE9E5;
+cursor:pointer; /*小手*/
+/* border: 1px solid #6BD0CD; */
+
+border: 1px solid #3ea3a7;
+}
+.pagination > li > a:hover{
+color: #ffffff;
+background-color: #3f7c9e;
+}
+/* 设置拟态窗的 */
+.modal-open{
+padding: 0px !important;
+}
+
+.information{
+width: 400px;
+height: 200px;
+margin-left: auto;
+margin-top: 40%;
+background-color: rgba(5, 32, 32,.9);
+}
+.messageModal-content{
+margin-left: auto;
+margin-top: 40%;
+background-color: rgba(5, 32, 32,.9);
+}
+
+.Organizationmodal-content{
+width: 400px;
+height: 200px;
+margin-left: auto;
+margin-top: 40%;
+background-color: rgba(5, 32, 32,.9);
+}
+
+#myModalLabel{
+color: #7AE9E5;
+}
+.modal-header{
+border: none;
+}
+.modal-footer{
+border: none;
+text-align: center;
+padding: 12px;
+}
+.messageModal-footer{
+padding: 8px;
+}
+.modal-body{
+width: 90%;
+background-color: #044A47;
+margin-left: 5%;
+height: 90px;
+padding: 0px;
+text-align:center;
+}
+
+.messageModal-body{
+width: 90%;
+background-color: #044A47;
+margin-left: 5%;
+height: 160px;
+padding: 0px;
+text-align:center;
+}
+/* 短信信息的 */
+.modalImdSpan{
+position: relative;
+top: 30px;
+}
+.messageSpanImd{
+top: 0px;
+}
+.modalSpan{
+color: #ffffff;
+font-size: 16px;
+}
+.messageSpan{
+color: #ffffff;
+width: 100%;
+height: 160px;
+word-break: break-all;
+word-wrap: break-word;
+white-space: initial;
+display: block;
+overflow-y: auto;/*内容多于div高度时，出现滚动条*/
+padding-right: 1%;
+padding-left: 1%;
+}
+
+.OrganizationSpan{
+color: #7ae9c5;
+width: 100%;
+font-size: 16px;
+word-break: break-all;
+word-wrap: break-word;
+white-space: initial;
+display: block;
+overflow-y: auto;/*内容多于div高度时，出现滚动条*/
+padding-right: 1%;
+padding-left: 1%;
+letter-spacing: 2px;
+}
+
+.btn-primary{
+background-color: #052020;
+border: 1px solid #79EBE7;
+color: rgb(228, 207, 157);
+padding: 3px 18px;
+letter-spacing: 2px;
+}
+.btn-primary:hover{
+background-color: #0F4949;
+border: 1px solid #79EBE7;
+}
+
+.TozhiContent{
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    -o-text-overflow: ellipsis;
+    white-space:nowrap;
+    width:230px;
+    display:block;
+}
+/* 时间控件的 */
+.dataDiv{
+    height: 27px;
+    width: 175px;
+}
+.fontData{
+height: 27px;
+border-radius: 0px;
+color: #6BD0CD;
+outline:none;
+background:#081d24;
+border: 1px solid #3ea3a7;
+border-radius: 2px;
+border-right: none;
+}
+.fontData:focus{ outline: none;}
+.fontData1{
+    height: 27px;
+    border-radius: 0px;
+    color: #6BD0CD;
+    outline:none;
+    background:#081d24;
+    border: 1px solid #3ea3a7;
+    border-radius: 2px;
+    border-right: none;
+}
+.fontData1:focus{ outline: none;}
+.form-control:focus{
+border-color: #6BD0CD;
+}
+.input-group-addon{
+    padding:0px 6px;
+    border-radius: 0px;
+    background:#081d24;
+    border: 1px solid #3ea3a7;
+    border-radius: 2px;
+    border-left: none;
+}
+.datepicker tfoot tr th:hover{
+background: #176275;
+}
+/* 设置表 */
+#tableWR, #table_case{
+width: 100%;
+color:#62C1BE;
+font: normal bold 13px "微软雅黑";
+}
+#tableWR thead, #table_case thead{
+color: #2fb3be;
+font-size: 15px;
+}
+/* 表间隔颜色设置 */
+.table-striped > tbody > tr:nth-of-type(odd){
+/* background-color: rgba(78, 144, 142, 0.1); */
+background-color: rgba(78, 144, 142, 0);
+}
+.table-striped > tbody > tr{
+background-color: rgba(78, 144, 142, 0.1);
+}
+/* 表格标题的 */
+.bootstrap-table .table thead>tr>th{
+background-color: rgba(78, 144, 142, 0.1);
+}
+#tableWR td, #table_case td{
+vertical-align:middle;
+/* border: 1px solid #6BD0CD; */
+border: 1px solid #0c485d;
+border-radius: 4px;
+}
+.table-hover > tbody > tr:hover{
+background-color: #043A3A;
+}
+.table > caption + thead > tr:first-child > th, 
+.table > colgroup + thead > tr:first-child > th, 
+.table > thead:first-child > tr:first-child > th, 
+.table > caption + thead > tr:first-child > td, 
+.table > colgroup + thead > tr:first-child > td, 
+.table > thead:first-child > tr:first-child > td{
+text-align: center;
+/* border: 1px solid #6BD0CD; */
+border: 1px solid #0c485d;
+}
+
+.messageModal-header{
+padding: 8px;
+font-size: 16px;
+}
+
+
+.messageModal-header h4{
+font-size: 16px;
+margin-left: 16px;
+}
+
+.dropdown-menu > li > a{
+color: #6BD0CD;
+}
+.fixed-table-container thead th .th-inner{
+padding: 3px !important;
+background-size: 13px 13px;
+background-position: 100% 13px;
+
+}
+.fixed-table-container{
+padding-bottom: 0px;
+}
+.fixed-table-header table{
+width: 100% !important;
+}
+.bootstrap-table{
+height: 90%;
+}
+.fixed-table-container{
+border: none;
+overflow-y: auto;
+height: 100%;
+}
+.dropdown-toggle{
+padding: 3px 10px;
+}
+.fixed-table-pagination{
+color: #6BD0CD;
+}
+/* 加载慢的时候 */
+.fixed-table-loading{
+height: 80px;
+width: 400px;
+padding-top: 25px;
+color: #6BD0CD;
+background: #001019;
+border: 1px solid #6BD0CD;
+font-size: 20px;
+border-radius: 8px;
+margin-top: 50px;
+margin-left: 250px;
+display: none !important;
+}
+/* 分页选择，选择10行，20行的 */
+.btn-default{
+background-color: rgba(0, 16, 25, 0.5);
+/* border: 1px solid #6BD0CD; */
+color: #6BD0CD;
+
+border: 1px solid #3ea3a7;
+}
+.btn-default:hover{
+color: #fff;
+background-color: #065656;
+border-color: #6BD0CD;
+}
+.pagination > .disabled > a{
+background-color: #065656;
+border-color:  #6BD0CD;
+}
+.btn-default:active, .btn-default.active,
+.open > .dropdown-toggle.btn-default{
+color: #fff;
+background-color: #065656;
+border-color: #6BD0CD;
+}
+.dropdown-menu{
+background-color: #001019cc;
+/* border: 1px solid #6BD0CD; */
+color: #6BD0CD;
+
+border: 1px solid #4f6167;
+}
+.dropdown-menu > .active > a{
+background-color: #065656;
+}
+/* 时间控件 */
+.datepicker-dropdown:after {
+border: none;
+}
+.datepicker{
+color: #49CAD0;
+/* background-color: #02374F; */
+background-color: rgba(0, 16, 25, .9);
+z-index: 999 !important;
+}
+.datepicker table tr td.new{
+color: #35A1AD;
+}
+.datepicker table tr td.day:hover{
+background-color: #176275;
+}
+.datepicker table tr td.active.active{
+background-color: #176275;
+}
+.datepicker .datepicker-switch:hover,
+.datepicker .prev:hover,
+.datepicker .next:hover,
+.datepicker tfoot tr th:hover{
+background-color: #176275;
+}
+
+
+/*设置树状图 滚动条样式*/
+#comTree::-webkit-scrollbar {/*滚动条整体样式*/
+width: 4px;     /*高宽分别对应横竖滚动条的尺寸*/
+height: 4px;
+}
+#comTree::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+border-radius: 5px;
+background:#4FD7DC;
+}
+#comTree::-webkit-scrollbar-track {/*滚动条里面轨道*/
+border-radius: 5px;
+background: rgba(0,0,0,0.1);
+}
+
+/*设置树状图 滚动条样式*/
+#comTree_shixiao::-webkit-scrollbar {/*滚动条整体样式*/
+width: 4px;     /*高宽分别对应横竖滚动条的尺寸*/
+height: 4px;
+}
+#comTree_shixiao::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+border-radius: 5px;
+background:#4FD7DC;
+}
+#comTree_shixiao::-webkit-scrollbar-track {/*滚动条里面轨道*/
+border-radius: 5px;
+background: rgba(0,0,0,0.1);
+}
+
+/*设置树状图 滚动条样式*/
+#comTree_case::-webkit-scrollbar {/*滚动条整体样式*/
+    width: 4px;     /*高宽分别对应横竖滚动条的尺寸*/
+    height: 4px;
+}
+#comTree_case::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+    border-radius: 5px;
+    background:#4FD7DC;
+}
+#comTree_case::-webkit-scrollbar-track {/*滚动条里面轨道*/
+    border-radius: 5px;
+    background: rgba(0,0,0,0.1);
+}
+/*设置树状图 滚动条样式*/
+#comTree_CaseOvertime::-webkit-scrollbar {/*滚动条整体样式*/
+    width: 4px;     /*高宽分别对应横竖滚动条的尺寸*/
+    height: 4px;
+}
+#comTree_CaseOvertime::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+    border-radius: 5px;
+    background:#4FD7DC;
+}
+#comTree_CaseOvertime::-webkit-scrollbar-track {/*滚动条里面轨道*/
+    border-radius: 5px;
+    background: rgba(0,0,0,0.1);
+}
+
+/*设置树状图 滚动条样式*/
+#comTree_Proportion::-webkit-scrollbar {/*滚动条整体样式*/
+    width: 4px;     /*高宽分别对应横竖滚动条的尺寸*/
+    height: 4px;
+}
+#comTree_Proportion::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+    border-radius: 5px;
+    background:#4FD7DC;
+}
+#comTree_Proportion::-webkit-scrollbar-track {/*滚动条里面轨道*/
+    border-radius: 5px;
+    background: rgba(0,0,0,0.1);
+}
+
+
+/*设置树状图 滚动条样式*/
+#comTree_Report::-webkit-scrollbar {/*滚动条整体样式*/
+    width: 4px;     /*高宽分别对应横竖滚动条的尺寸*/
+    height: 4px;
+}
+#comTree_Report::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+    border-radius: 5px;
+    background:#4FD7DC;
+}
+#comTree_Report::-webkit-scrollbar-track {/*滚动条里面轨道*/
+    border-radius: 5px;
+    background: rgba(0,0,0,0.1);
+}
+/* 短信内容 */
+.messageSpan::-webkit-scrollbar {/*滚动条整体样式*/
+width: 4px;     /*高宽分别对应横竖滚动条的尺寸*/
+height: 4px;
+}
+.messageSpan::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+border-radius: 5px;
+background:#4FD7DC;
+}
+.messageSpan::-webkit-scrollbar-track {/*滚动条里面轨道*/
+border-radius: 5px;
+background: rgba(0,0,0,0.1);
+}
+
+/* 表格的 */
+.fixed-table-body::-webkit-scrollbar {/*滚动条整体样式*/
+width: 4px;     /*高宽分别对应横竖滚动条的尺寸*/
+height: 4px;
+}
+.fixed-table-body::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+border-radius: 5px;
+background:#4FD7DC;
+}
+.fixed-table-body::-webkit-scrollbar-track {/*滚动条里面轨道*/
+border-radius: 5px;
+background: rgba(0,0,0,0.1);
+}
+
+/* 加载中外层 */
+#loadingS{
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .5);
+    position: absolute;
+    top:0;
+    left: 0;
+    z-index: 9998;
+    text-align: center;
+}
+
+/* 加载中 */
+#loading{
+position: fixed;
+top: 41%;
+left: 40%;
+height: 80px;
+width: 400px;
+padding: 26px 0px;
+color: #6BD0CD;
+/* background: #001019; */
+background: rgba(0, 16, 25, .8);
+border: 1px solid #6BD0CD;
+font: normal bold 20px "微软雅黑";
+font-size: 20px;
+border-radius: 8px;
+font-weight:normal; /* 去除父类的  */
+}
+
+.ReturnDiv{
+width: auto;
+position: absolute;
+right: 1.5%;
+height: 28px;
+cursor:pointer;
+padding: 0px 14px;
+top: 11px;
+/* border: 1px solid #487180; */
+/* width: 80px; */
+}
+.Returnimg{
+width: 14px;
+float: left;
+margin-top: 4px;
+/* margin-left: 5px; */
+}
+.Returnspan{
+color: #62C1BE;
+font-size: 14px;
+float: left;
+margin-top: 3px;
+margin-left: 8px;
+}
+
+
+.Tozhi_names{
+    width: 100%;
+    border-bottom: 1px solid #0c485d;
+    height: 45px;
+
+}
+.DataNum{
+    position: inherit;
+    width: 100%;
+   height: 45px;
+}
+.Tozhi_dataN{
+    float: left;
+    width: 33%;
+}
+.dataNum1{
+    width: 85%;
+    border-right: 1px solid #0c485d;
+    float: left;
+    padding-top: 10px;
+    margin-left: 2%;
+    height: 45px;
+}
+.Picc_test1{
+    padding-top:3px;margin-left: 5px; 
+    /* border-right: 1px solid #487180; */
+    height: 100%;
+    padding-right: 20px;
+}
+
+.short_ul{
+    float: left;
+    font-size: 16px;
+    letter-spacing: 2px;
+    color: rgb(98, 193, 190);
+    /* width: 97%; */
+    /* height: 100%; */
+    margin: 0px;
+    margin-top: 8px;
+    margin-left: 1.5%;
+    /* border: 1px solid #1bb4a5; */
+    border-radius: 4px;
+    /* background-color: rgba(10, 39, 51, .9); */
+}
+.short_li{
+    float: left;
+    list-style: none;
+    /* width: 170px; */
+    text-align: center;
+    height: 100%;
+    padding: 5px 18px;
+    /* border-right: 1px solid #487180; */
+    cursor: pointer;
+}
+.population{
+    width: 97%;
+    height: calc(100% - 120px);
+    margin: 0 auto;
+    margin-top: 10px;
+    /* border: 1px solid #487180; */
+}
+.m_boxContent{
+    height: 100%;
+}
+/*控制列表切换内容的显示与隐藏*/
+.m_box_one, .m_box_two, .m_box_three{
+    display: none;
+    width: 100%;
+    margin: 0px auto;
+}
+.m_box_one.active, .m_box_two.active,.m_box_three.active {
+    display: block;
+}
+.m_box_two{
+    /* margin-top: 30px; */
+    position: relative;
+    top: 30px;
+}
+.radio_div{
+    margin: 7px 0px;
+    padding: 0px 6px;
+}
+.radio_Switch{
+    float: left;
+}
+.span_shut{
+    float: left;
+    margin-left: 2px;
+    margin-right: 60px;
+}
+.sapn_open{
+    float: left;
+    margin-left: 2px;
+}
+.width_22{
+    margin-left:1%;
+    width: 23%;
+}
+.width_130x{
+    width: 130px;
+}
+.Img_query{
+    margin-top: 14px;
+    cursor: pointer;
+}
+.top_margin_10{
+    margin-top: 10px;
+}
+.case_centerDIv{
+    margin-left: 1%;
+    width: 28%;
+    float: left;
+    height: 45px;
+}
+.width_185X{
+    width: 185px;
+}
+.case_Img{
+    margin-top: 14px;
+    cursor: pointer;
+    float: left;
+    padding: 0px 11px;
+}
+.case_table{
+    position: absolute;
+    top: 70px;
+    left: 19%;
+    width: 80%;
+    height: 82%;
+}
+.chart_one, .echarts_P, .echarts_R{
+    display: none;
+}
+
+/* 设置表 */
+#table_CaseOvertime, #table_case, #table_Proportion, #table_Report{
+    width: 100%;
+    color:#62C1BE;
+    font: normal bold 13px "微软雅黑";
+}
+#table_CaseOvertime thead, #table_case thead, #table_Proportion thead, #table_Report thead{
+    color: #2fb3be;
+    font-size: 15px;
+}
+#table_CaseOvertime td, #table_case td, #table_Proportion td, #table_Report td{
+    vertical-align:middle;
+    /* border: 1px solid #6BD0CD; */
+    border: 1px solid #0c485d;
+    border-radius: 4px;
+}
+
+.echarts_Table{
+    width: 1050px;
+    height:430px;
+    margin: 0px auto;
+}
+
+.registnoSpan{
+    white-space: inherit;
+    word-wrap: break-word;
+    /* width: 100px; */
+}
+
+#table_Proportion th, #table_Proportion td {
+    text-align: center;
+    vertical-align: middle!important;
+}
+
+#table_Report th, #table_Report td {
+    text-align: center;
+    vertical-align: middle!important;
+}
+#table_Proportion th:nth-last-child(1) .th-inner {
+    padding: 3px !important;
+    background-size: 13px 13px;
+    background-position: 100% 25px;
+}
+#table_Proportion th:nth-last-child(2) .th-inner {
+    padding: 3px !important;
+    background-size: 13px 13px;
+    background-position: 100% 25px;
+}
+#table_Proportion th:nth-last-child(3) .th-inner {
+    padding: 3px !important;
+    background-size: 13px 13px;
+    background-position: 100% 25px;
+}
+#table_Report th:nth-last-child(2) .th-inner {
+    padding: 3px !important;
+    background-size: 13px 13px;
+    background-position: 100% 25px;
+}
+#table_Report th:nth-last-child(3) .th-inner {
+    padding: 3px !important;
+    background-size: 13px 13px;
+    background-position: 100% 25px;
+}
+/*  设置浏览器宽度不小于1900*/
+@media screen and (min-width:1900px){
+	.rightCenter{
+	    position: absolute;
+	    left: 21%;
+	    top: 10px;
+	    width: 78%;
+	    height: calc(100% - 30px);
+	    text-align: left;
+	}
+	.listRightCenter{
+	    float: left;
+	    width: 100%;
+	    margin-left: -1px;
+	    margin-top: 1px;
+	    font: normal bold 14px "微软雅黑";
+	    border-radius: 2px; /* 圆角*/
+	    border: 1px solid #0F6665;
+	    height: auto;
+	    letter-spacing:1px;
+	    text-align: center;
+        background-color: rgba(78, 144, 142, 0.1);
+        height: 95%;
+	    overflow-y: auto;
+	    padding-bottom: 10px;
+	}
+	/*输出框前的标题  */
+	.spanFormsCenter{
+	    display:block;
+	    /* color: #78E6E2; */
+	    color: #62C1BE;
+	    width: 185px;
+	    font-size: 14px;
+	    margin-top: 5px;
+	    padding: 18px 5px;
+	}
+	/* 设置输入框 */
+	.inputText{
+	    width: 150px;
+	    height: 25px;
+	    font-size: 16px;
+	    margin: 18px 0px;
+	    padding: 0px 8px;
+	    background:rgba(0, 0, 0, 0);
+	    color:#6BD0CD;
+	
+	    border-radius: 2px;
+	    border: 1px solid #3ea3a7;
+	}
+	.spanFormsCenterForOther{
+	    display:block;
+	    /* color: #78E6E2; */
+	    color: #62C1BE;
+	    width: 100px;
+	    font-size: 14px;
+	    margin-top: 5px;
+	    padding: 18px 5px;
+	}
+	/* 保存按钮 */
+	.buttonOk{
+	    position: absolute;
+	    left: 58%;
+	    bottom:45px;
+	    width: 100px;
+	    height: 32px;
+	    border:1px solid #79EBE7;
+	    border-radius: 2px;
+	    cursor:pointer; /*小手*/
+	    text-align: center;
+	
+	    background-color: rgba(8, 29, 36, 0.6);
+    }
+    .population{
+        width: 97%;
+        height: 88%;
+        margin: 0 auto;
+        margin-top: 10px;
+        /* border: 1px solid #487180; */
+    }
+    .echarts_Table{
+        width: 1450px;height:750px;
+    }
+
+}

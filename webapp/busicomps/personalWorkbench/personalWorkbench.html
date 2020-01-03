@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> </title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" href="css/bootstrap-table.min.css">
+    <link rel="stylesheet" href="css/index.css">
+
+</head>
+<body>
+<div class="topnav">
+    PICC理赔运营指挥平台
+    <div class="ReturnDiv" onclick="ReturnUpperLevel()" title="点击返回">
+            <img class="Returnimg" src="img/back-btn.png"/>           
+            <span class="Returnspan">返回</span>
+    </div>
+    <div class="Ausercode" onclick="AusercodeFun()" title="点击跳转">
+        <u>通赔数据下载区</u>
+    </div>
+</div>
+<div class="zj-container">
+    <!-- <div class="left-container">
+        <div class="left-panel">
+            <div class="title">车险省间通赔未决赔案情况</div>
+            <div class="line1">
+                <span class="line-title1">未决案件数量</span>
+                <div>453,6<samp>件</samp></div>
+            </div>
+            <div class="chart-container" >
+                <span class="chartspan1">28.41%</span>
+                <span class="chartspan2">24.74%</span>
+                <div class="chart" id="chart1"></div>
+                
+            </div>
+            <div class="chart-container" >
+                <span class="chartspan1">28.41%</span>
+                <span class="chartspan2">24.74%</span>
+                <div class="chart" id="chart2"></div>
+            </div>
+            <div class="chart-container" >
+                <span class="chartspan1">28.41%</span>
+                <span class="chartspan2">24.74%</span>
+                <div class="chart" id="chart3"></div>
+            </div>
+        </div>
+        <div class="left-panel">
+            <div class="title">车险自赔未决赔案情况</div>
+            <div class="line1">
+                <span class="line-title1">未决案件数量</span>
+                <div>453,6<samp>件</samp></div>
+            </div>
+            <div class="chart-container" >
+                <span class="chartspan1">28.41%</span>
+                <span class="chartspan2">24.74%</span>
+                <div class="chart" id="chart4"></div>
+            </div>
+            <div class="chart-container" >
+                <span class="chartspan1">28.41%</span>
+                <span class="chartspan2">24.74%</span>
+                <div class="chart" id="chart5"></div>
+            </div>
+            <div class="chart-container" >
+                <span class="chartspan1">28.41%</span>
+                <span class="chartspan2">24.74%</span>
+                <div class="chart" id="chart6"></div>
+            </div>
+        </div>
+    </div> -->
+    <div class="right-container">
+        <div class="rt-container">
+            <div class="rtl-container">
+                <div class="rtll-container">
+                    <div class="line-text">
+                        <div class="line-title1">业务归属机构代码</div>
+                        <div class="select-line">
+                            <div class="select-container select32">
+                                <select class="select-city province">
+                                </select>
+                                <img src="./img/sanjiao.png" class="sanjiao" alt="">
+                            </div>
+                            <div class="select-container select32">
+                                <select class="select-city city">
+                                </select>
+                                <img src="./img/sanjiao.png" class="sanjiao" alt="">
+                            </div>
+                            <div class="select-container select32">
+                                <select class="select-city county">
+                                </select>
+                                <img src="./img/sanjiao.png" class="sanjiao" alt="">
+                            </div>
+                        </div>
+                        <input class="comlevel" type="hidden">
+                    </div>
+                    <div class="line-text">
+                        <div class="line-title1">通赔类型</div>
+                        <div class="select-line">
+                            <div class="select-container select48">
+                                <select class="select-city lflag">
+                                    <!-- <option value="">全部</option> -->
+                                    <option value="S">省间通赔</option>
+                                    <option value="T">省内通赔</option>
+                                    <option value="L">自赔</option>
+                                </select>
+                                <img src="./img/sanjiao.png" class="sanjiao" alt="">
+                            </div>
+                            <div class="select-container select48">
+                                <select class="select-city lflagType">
+                                    <option value='1'>本代外</option>
+                                    <option value='2'>外代本</option>
+                                </select>
+                                <img src="./img/sanjiao.png" class="sanjiao" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="line-text">
+                        <div class="line-title1">出险起止日期</div>
+                        <div class="select-line">
+                            <span class="spancolor">从</span>
+                            <div class="select-container select45">
+                                <input type="text" value="" id="datepicker1" class="select-city">
+                                <img src="./img/sanjiao.png" class="sanjiao" alt="">
+                            </div>
+                            <span class="spancolor">到</span>
+                            <div class="select-container select45">
+                                <input type="text" value="" id="datepicker2" class="select-city">
+                                <img src="./img/sanjiao.png" class="sanjiao" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="line-text">
+                        <div class="line-title1">立案起止日期</div>
+                        <div class="select-line">
+                            <span class="spancolor">从</span>
+                            <div class="select-container select45">
+                                <input type="text" value="" id="datepicker3" class="select-city">
+                                <img src="./img/sanjiao.png" class="sanjiao" alt="">
+                            </div>
+                            <span class="spancolor">到</span>
+                            <div class="select-container select45">
+                                <input type="text" value="" id="datepicker4" class="select-city">
+                                <img src="./img/sanjiao.png" class="sanjiao" alt="">
+                            </div>
+                        </div>
+                        </div>
+                         <div class="line-text">
+                        <div class="line-title1">报案起止日期</div>
+                        <div class="select-line">
+                            <span class="spancolor">从</span>
+                            <div class="select-container select45">
+                                <input type="text" value="" id="datepicker5" class="select-city">
+                                <img src="./img/sanjiao.png" class="sanjiao" alt="">
+                            </div>
+                            <span class="spancolor">到</span>
+                            <div class="select-container select45">
+                                <input type="text" value="" id="datepicker6" class="select-city">
+                                <img src="./img/sanjiao.png" class="sanjiao" alt="">
+                            </div>
+                        </div>
+                        </div>
+                </div>
+                <div class="rtlr-container rtlr-container2">
+                    <div class="line-text">
+                        <div class="line-title1">案件状态</div>
+                        <div class="select-line">
+                            <div class="select-container">
+                                <select class="select-city i8state">
+                                </select>
+                                <img src="./img/sanjiao.png" class="sanjiao" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="line-text">
+                        <div class="line-title1">是否涉及人伤</div>
+                        <div class="select-line">
+                            <div class="select-container">
+                                <select class="select-city personTraceFlag">
+                                	<option value="">全部</option>
+                                    <option value="1">是</option>
+                                    <option value="0">否</option>
+                                </select>
+                                <img src="./img/sanjiao.png" class="sanjiao" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="line-text">
+                        <div class="line-title1">客户群分类</div>
+                        <div class="select-line">
+                            <div class="select-container">
+                                <select class="select-city customerType">
+                                    <option value="非运营客车">非运营客车</option>
+                                </select>
+                                <img src="./img/sanjiao.png" class="sanjiao" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="line-text">
+                        <div class="line-title1">估损金额</div>
+                        <div class="select-line">
+                            <div class="select-container">
+                                <select class="select-city operator">
+                                    <option value="1">&gt;=</option>
+                                    <option value="2">&lt;=</option>
+                                    <option value="3">&gt;</option>
+                                    <option value="4">=</option>
+                                    <option value="5">&lt;</option>
+                                </select>
+                                <img src="./img/sanjiao.png" class="sanjiao" alt="">
+                            </div>
+                            <input class="select-city money" value=""><span class="spancolor">元</span>
+         </div>
+                    </div>
+                </div>
+            </div>
+            <div class="rtr-container">
+                <button class="btns btn1 queryBty">点击查询</button>
+                <button class="btns btn2 excportBty">清单导出</button>
+                 <div class="input-group inputSS">
+                    <span class="closes">
+                        <img src="img/closes.png">
+                    </span>
+                    <input type="text" class="form-control searchInput registno" placeholder="报案号" onkeyup="this.value=this.value.replace(/^ +| +$/g,'')">
+                    <span class="input-group-addon btn searchImg" id="registnoBtn">
+                        <img src="img/search.png" height="16"> 
+                    </span>
+                </div>
+                <div class="input-group inputSS">
+                    <span class="closes1">
+                        <img src="img/closes.png">
+                    </span>
+                    <input type="text" class="form-control searchInput usercode" placeholder="滞留人工号 ">
+                    <span class="input-group-addon btn searchImg" id="DetainedBtn">
+                        <img src="img/search.png" height="16"> 
+                    </span>
+                </div>
+                <div class="select-container">
+                    <select class="select-city5 orderBy">
+                        <option value="1">按时间顺序排序</option>
+                        <option value="2">按人员姓名排序</option>
+                    </select>
+                    <img src="./img/sanjiao.png" class="sanjiao" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="rb-container">
+            <table  id="table" style='table-layout:fixed;'></table>
+        </div>
+
+    </div>
+</div>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/echarts.common.min.js"></script>
+<script src="js/bootstrap-table.min.js"></script>
+<script type="text/javascript" src="js/bootstrap-table-zh-CN.min.js"></script>
+<script src="js/bootstrap-datepicker.min.js"></script>
+<script src="js/bootstrap-datepicker.zh-CN.min.js"></script>
+<script src="js/personalWorkbench.js"></script>
+<script src="js/personalWorkbench_select.js"></script>
+
+</body>
+</html>

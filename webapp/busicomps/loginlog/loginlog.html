@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PICC理赔运营指挥平台</title>
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <!-- bootstrap-table table控件  -->
+    <link rel="stylesheet" href="js/Table/bootstrap-table.min.css"/>
+    <!-- bootstrap-datepicker 时间控件的 -->
+    <link rel="stylesheet" href="js/Data/bootstrap-datepicker3.css"/>
+    <!-- ztree 树状图控件的 -->
+    <link rel="stylesheet" href="lib/ztree3.5.15/css/zTreeStyle/zTreeStyle.css" type="text/css">
+    <!-- iconfont  -->
+    <link rel="stylesheet" href="lib/iconfont/iconfont.css">
+    <!-- 本地的 -->
+    <link rel="stylesheet" href="css/loginlog.css">
+</head>
+
+<body>
+<!-- 加快背景图片加载，减少白屏时间 -->
+<style>
+body{
+    padding: 0px;
+    margin: 0px;
+    /* background-color:#052438; */
+    width:100%;
+    height:100%;
+    background-image:url("img/bg5143f7a.jpg");
+    /* background-size: cover; */
+    background-size: auto;
+    background-repeat:no-repeat;
+}
+</style>
+<div id="PiccTopei">
+    <div class="leftTop">
+        <div class="picc-leftdiv">
+            <span>PICC 理赔运营指挥平台</span>
+        </div>
+        <ul class="tab-header">
+            <li class="first-li active"><span>操作日志</span></li>
+            <li class="second-li"><span>系统操作日志统计</span></li>
+            <li class="thirdiy-li"><span>通报数据</span></li>
+        </ul> 
+        <!-- 返回 -->
+        <div class="ReturnBtn">
+            <span class="iconfont iconfanhui1 Returnimg"></span>
+            <!-- <img class="Returnimg" src="img/back-btn.png"/> -->
+            返回
+        </div>
+    </div>
+    <div class="piccCenter">
+        <!-- tab页  登录日志 -->
+        <div class="m-box first-content active">
+            <!-- 切换 -->
+            <ul class="LogList_system">
+                <li class="LoginLog-li active">
+                    <span class="iconfont icondenglurizhi icon_Li"></span>
+                    <span class="Iconli_text">登录日志</span>
+                </li>
+                <!-- 暂时隐藏 -->
+                <!-- <li class="systemLog-li">
+                    <span class="iconfont iconxitongcaozuorizhi icon_Lix1"></span>
+                    <span class="Iconli_text">系统操作日志</span>
+                </li> -->
+            </ul>
+            <div class="MainCenter">
+                <img src="./img/UpperLeft.png" class="UpperLeftImg">
+                <img src="./img/UpperRight.png" class="UpperRightImg">
+                <img src="./img/LowerLeft.png" class="LowerLeftImg">
+                <img src="./img/lowerRight.png" class="lowerRightIMg">
+                <div class="LoginLog-box LoginLog_content active">
+                    <!-- 中部左 -->
+                    <div class="leftCenter">
+                        <div class="listLeftCenter">
+                            <div class="comTree_mechanism"><span class="mechanism_span comTree_LogListSapn">总公司</span></div>
+                            <!-- 树状图 -->
+                            <ul id="comTree_LogList" class="ztree" ></ul>
+                        </div>
+                    </div>
+                    <div class="LogList">
+                        <div class="LogList_X2">
+                            <div class="inputCollection">
+                                <span class="Tozhi-centerSpan" style="margin-top: 0px;">机构级别</span>
+                                <select class="TozhiText TozhiSelect" style="margin-top: 0px;" id="Level_LogList" onchange="InitMainTable()">
+                                    <option id="selectOne_LogList" value="1">总公司</option>
+                                    <option id="selectTwo_LogList" value="2">省公司</option>
+                                    <option id="selectThree_LogList" value="3">市公司</option>
+                                    <option value="4">县机构</option>
+                                </select> 
+                                <!-- <div class="DIV-TozhiSelect"></div> -->
+                            </div> 
+                            <div class="inputCollection1">
+                                <span class="dataSpan Tozhi-centerSpan">操作时间</span>
+                                <div class="input-group date datepicker dataDiv datepRz" >
+                                    <input type="text" id="fontData" class="form-control fontData background_addon">
+                                    <div class="input-group-addon background_addon">
+                                        <img src="img/data.png" style="width:19px; margin-top: 2px;">
+                                    </div>
+                                </div>
+                                <span class="dataSpan Tozhi-centerSpan">&nbsp;-</span>
+                                <div class="input-group date datepicker dataDiv datepRz">
+                                    <input type="text" id="fontData2" class="form-control fontData background_addon">
+                                    <div class="input-group-addon background_addon">
+                                        <img src="img/data.png" style="width:19px; margin-top: 2px;">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="inputCollection">
+                                <span class="Tozhi-centerSpan">操作类型</span>
+                                <select  id="mainSelect" name="mainSelect" class="mainSelect caozuoleixing">
+                                    <option value="0">全部</option>
+                                    <option value="1">登录</option>
+                                    <option value="2">登出</option>  
+                                </select>
+                            </div>
+                            <div class="LogListBtn">
+                                <span class="iconfont iconsousuo icostyle" onclick="InitMainTable()"></span>
+                                <!-- <button class="BtnClass" onclick="InitMainTable()">查询</button> -->
+                            </div>
+                        </div>
+                        <div class="LogList_X2">
+                            <div class="inputCollection">
+                                <span class="Tozhi-centerSpan">用户工号</span>
+                                <input type="text" class="mainInput" name="" id="usercode">
+                            </div>
+                            <div class="inputCollection">
+                                <span class="Tozhi-centerSpan">用户姓名</span>
+                                <input type="text" class="mainInput" name="" id="username">
+                            </div>
+                            <div class="LogListBtn">
+                                <span class="iconfont icondaochu icostyle" id="exportBtn"></span>
+                                <!-- <button class="BtnClass exportBtn" id="exportBtn">导出</button> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="TableDiv">
+                        <table id="piccTable" class="table table-bordered center" style='table-layout:fixed;'></table>
+                    </div>
+                </div>
+                <div class="LoginLog-box systemLog_content">系统操作日志</div>
+            </div>
+        </div>
+        <!-- tab页  系统操作日志统计 -->
+        <div class="m-box second-content">
+            <ul class="tab-system">
+                <li class="logon-li active">
+                    <span class="iconfont iconyuedenglurenci icon_Li"></span>
+                    <span class="Iconli_text">月登录人次</span>
+                    <!-- <span>月登录人次</span> -->
+                </li>
+                <li class="download-li">
+                    <span class="iconfont iconyueshujuxiazai icon_Li"></span>
+                    <span class="Iconli_text">月数据下载次数</span>
+                    <!-- <span>月数据下载次数</span> -->
+                </li>
+                <li class="click-li">
+                    <span class="iconfont iconyueyemiandianji icon_Li"></span>
+                    <span class="Iconli_text">月页面点击次数</span>
+                    <!-- <span>月页面点击次数</span> -->
+                </li>
+            </ul>
+            <div class="system_con">
+                <!-- 四边的角 -->
+                <img src="./img/UpperLeft.png" class="UpperLeftImg">
+                <img src="./img/UpperRight.png" class="UpperRightImg">
+                <img src="./img/LowerLeft.png" class="LowerLeftImg">
+                <img src="./img/lowerRight.png" class="lowerRightIMg">
+                <!-- 四边的角 -->
+                <!-- 登录人次数的 -->
+                <div class="system-box logon-content active">
+                     <!-- 中部左 -->
+                    <div class="leftCenter">
+                        <div class="listLeftCenter">
+                            <div class="comTree_mechanism"><span class="mechanism_span comTreetSapn">总公司</span></div>
+                            <!-- 树状图 -->
+                            <ul id="comTree" class="ztree" ></ul>
+                        </div>
+                    </div>
+                    <div class="TozhirightCenter">
+                        
+                        <div class="case_centerDIv">
+                            <span class="Tozhi-centerSpan">机构级别：</span>
+                            <select class="TozhiText TozhiSelect width_85PX" id="noticeLevel" onchange="LoginTablefun()">
+                                <option id="selectOne_Login" value="1">总公司</option>
+                                <option id="selectTwo_Login" value="2">省公司</option>
+                                <option id="selectThree_Login" value="3">市公司</option>
+                                <option value="4">县机构</option>
+                            </select> 
+                        </div> 
+                        <div class="case_centerDIv">
+                            <span class="Tozhi-centerSpan" style="float:left;margin-top:14px;margin-right: 18px;">统计时间：</span>
+                            <div class="input-group date datepicker dataDiv dateTime" style="margin-top: 8px;">
+                                <input type="text" id="logonTime" class="form-control fontData background_addon">
+                                <div class="input-group-addon background_addon">
+                                    <img src="img/data.png" style="width:19px; margin-top: 2px;">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="BtnCollection Btnstyle">
+                            <span class="iconfont iconsousuo icon_sou" title="查询" onclick="LoginTablefun()"></span>
+                            <span class="iconfont icondaochu icon_sou" title="导出" onclick="exportLoginFun()"></span>
+                            <!-- <button class="BtnClass" onclick="LoginTablefun()" >查询</button>
+                            <button class="BtnClass exportBtn" onclick="exportLoginFun()" >导出</button> -->
+                        </div>
+                    </div>
+                    <div class="case_table">
+                        <table id="logonTable" class="table table-bordered center" style='table-layout:fixed;'></table>
+                    </div>
+                </div>
+                <!-- 月数据下载次数 -->
+                <div class="system-box download-content">
+                    <div class="leftCenter">
+                        <div class="listLeftCenter">
+                            <div class="comTree_mechanism"><span class="mechanism_span comTree_downloadSpan">总公司</span></div>
+                            <ul id="comTree_download" class="ztree" ></ul>
+                        </div>
+                    </div>
+                    <div class="TozhirightCenter">
+                        <div class="case_centerDIv1">
+                            <span class="Tozhi-centerSpan">机构级别：</span>
+                            <select class="TozhiText TozhiSelect width_85PX" id="downloadLevel" onchange="downloadTablefun()">
+                                <option id="selectOne_download" value="1">总公司</option>
+                                <option id="selectTwo_download" value="2">省公司</option>
+                                <option id="selectThree_download" value="3">市公司</option>
+                                <option value="4">县机构</option>
+                            </select> 
+                        </div> 
+                        <div class="case_centerDIv1">
+                            <span class="Tozhi-centerSpan" style="float:left;margin-top:14px;margin-right: 6px;">统计时间：</span>
+                            <div class="input-group date datepicker dataDiv dateTime" style="margin-top: 8px;">
+                                <input type="text" id="downloadTime" class="form-control fontData background_addon">
+                                <div class="input-group-addon background_addon">
+                                    <img src="img/data.png" style="width:19px; margin-top: 2px;">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="case_centerDIv1">
+                            <span class="Tozhi-centerSpan">模块名称：</span>
+                            <input type="text" id="modulename"  onkeyup="value=value.replace(/[^\a-\z\A-\Z0-9\u4E00-\u9FA5]/g,'')" onpaste="value=value.replace(/[^\a-\z\A-\Z0-9\u4E00-\u9FA5]/g,'')" oncontextmenu = "value=value.replace(/[^\a-\z\A-\Z0-9\u4E00-\u9FA5]/g,'')" class="inputText1 TozhiText width_85PX" />
+                        </div>
+                        <div class="BtnCollection Btnstyle">
+                            <span class="iconfont iconsousuo icon_sou" title="查询" onclick="downloadTablefun()"></span>
+                            <span class="iconfont icondaochu icon_sou" title="导出" onclick="exportdownloadFun()"></span>
+                            <!-- <button class="BtnClass" onclick="downloadTablefun()" >查询</button>
+                            <button class="BtnClass exportBtn" onclick="exportdownloadFun()" >导出</button> -->
+                        </div>
+                    </div>
+                    <div class="case_table">
+                        <table id="downloadTable" class="table table-bordered center" style='table-layout:fixed;'></table>
+                    </div>
+                </div>
+                <!-- 月页面点击次数 -->
+                <div class="system-box download-content">
+                    <!-- 中部左 -->
+                    <div class="leftCenter">
+                        <div class="listLeftCenter">
+                            <div class="comTree_mechanism"><span class="mechanism_span comTree_clickSpan">总公司</span></div>
+                            <!-- 树状图 -->
+                            <ul id="comTree_click" class="ztree" ></ul>
+                        </div>
+                    </div>
+                    <div class="TozhirightCenter">
+                        <div class="case_centerDIv1">
+                            <span class="Tozhi-centerSpan">机构级别：</span>
+                            <select class="TozhiText TozhiSelect width_85PX" id="clickLevel" onchange="clickTablefun()">
+                                <option id="selectOne_click" value="1">总公司</option>
+                                <option id="selectTwo_click" value="2">省公司</option>
+                                <option id="selectThree_click" value="3">市公司</option>
+                                <option value="4">县机构</option>
+                            </select> 
+                            <!-- <div class="DIV-TozhiSelect"></div> -->
+                        </div> 
+                        <div class="case_centerDIv1">
+                            <span class="Tozhi-centerSpan" style="float:left;margin-top:14px;margin-right: 6px;">统计时间：</span>
+                            <div class="input-group date datepicker dataDiv dateTime" style="margin-top: 8px;">
+                                <input type="text" id="clickTime" class="form-control fontData background_addon">
+                                <div class="input-group-addon background_addon">
+                                    <img src="img/data.png" style="width:19px; margin-top: 2px;">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="case_centerDIv1">
+                            <span class="Tozhi-centerSpan">页面名称：</span>
+                            <input type="text" id="pagename" onkeyup="value=value.replace(/[^\a-\z\A-\Z0-9\u4E00-\u9FA5]/g,'')" onpaste="value=value.replace(/[^\a-\z\A-\Z0-9\u4E00-\u9FA5]/g,'')" oncontextmenu = "value=value.replace(/[^\a-\z\A-\Z0-9\u4E00-\u9FA5]/g,'')" class="inputText1 TozhiText width_85PX" />
+                        </div>
+                        <div class="BtnCollection Btnstyle">
+                            <span class="iconfont iconsousuo icon_sou" title="查询" onclick="clickTablefun()"></span>
+                            <span class="iconfont icondaochu icon_sou" title="导出" onclick="exportClickFun()"></span>
+                            <!-- <button class="BtnClass" onclick="clickTablefun()" >查询</button>
+                            <button class="BtnClass exportBtn" onclick="exportClickFun()" >导出</button> -->
+                        </div>
+                    </div>
+                    <div class="case_table">
+                        <table id="clickTable" class="table table-bordered center" style='table-layout:fixed;'></table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- tab页  通报数据 -->
+        <div class="m-box thirdiy-content">
+                <ul class="tab_Bulletin">
+                    <li class="personnel-li active">
+                        <span class="iconfont iconrenyuanshangxianshuai icon_Li"></span>
+                        <span class="Iconli_text">人员上线率</span>
+                        <!-- <span>人员上线率</span> -->
+                    </li>
+                    <li class="Survey-li">
+                        <span class="iconfont iconchakancheshangxianshuai icon_Li"></span>
+                        <span class="Iconli_text">查勘车上线率</span>
+                        <!-- <span>查勘车上线率</span> -->
+                    </li>
+                    <li class="openingProgress-li">
+                        <span class="iconfont iconjiluyikaitongjindu icon_Li"></span>
+                        <span class="Iconli_text">记录仪开通进度</span>
+                    </li>
+                    <li class="surveyTimeout-li">
+                        <span class="iconfont iconchakanchaoshishuai icon_Li"></span>
+                        <span class="Iconli_text">查勘超时率</span>
+                    </li>
+                    <li class="loginAmount-li">
+                        <span class="iconfont icondengluliang icon_Li"></span>
+                        <span class="Iconli_text">登录量</span>
+                    </li>
+                    <!-- <li class="serveEecord-li"><span>服务记录仪上线率</span></li> -->
+                </ul>
+             
+                <div class="system_Bulletin">
+                    <!-- 四边的角 -->
+                    <img src="./img/UpperLeft.png" class="UpperLeftImg">
+                    <img src="./img/UpperRight.png" class="UpperRightImg">
+                    <img src="./img/LowerLeft.png" class="LowerLeftImg">
+                    <img src="./img/lowerRight.png" class="lowerRightIMg">
+                    <!-- 四边的角 -->
+                       <!-- 人员的 -->
+                    <div class="system-box personnel-content active">
+                        <div class="leftCenter">
+                            <div class="listLeftCenter">
+                                <div class="comTree_mechanism"><span class="mechanism_span comTreePersonnelSpan">总公司</span></div>
+                                <ul id="comTreePersonnel" class="ztree" ></ul>
+                            </div>
+                        </div>
+                        <div class="TozhirightCenter"> 
+                            <div class="case_centerDIv">
+                                <span class="Tozhi-centerSpan" style="float:left;margin-top:14px;margin-right: 18px;">统计时间：</span>
+                                <div class="input-group date datepicker dataDiv dateTime" style="margin-top: 8px;">
+                                    <input type="text" id="personnelTime" class="form-control fontData background_addon">
+                                    <div class="input-group-addon background_addon">
+                                        <img src="img/data.png" style="width:19px; margin-top: 2px;">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="BtnCollection Btnstyle">
+                                    <button class="BtnClass" title="此处为查勘员前一天上传位置情况" onclick="onlinenumFun(1)">当月实时上传位置清单</button>
+                                <button class="BtnClass exportBtn" title="此处为用户系统前一天授权情况" onclick="surveyornumFun(1)">用户权限系统实时清单</button>
+                                <span class="iconfont iconsousuo icon_sou" title="查询" onclick="personnelTablefun()"></span>
+                                <span class="iconfont icondaochu icon_sou" title="导出" onclick="exportPersonnelfun()"></span>
+                                <!-- <button class="BtnClass exportBtn" onclick="personnelTablefun()" >查询</button>
+                                <button class="BtnClass exportBtn" onclick="exportPersonnelfun()" >导出</button> -->
+                            </div>
+                        </div>
+                        <div class="case_table">
+                            <table id="personnelTable" class="table table-bordered center" style='table-layout:fixed;'></table>
+                        </div>
+                    </div>
+                    <!-- 查勘车的 -->
+                    <div class="system-box Survey-content">
+                        <div class="leftCenter">
+                                <div class="listLeftCenter">
+                                    <div class="comTree_mechanism"><span class="mechanism_span comTreeSurveySpan">总公司</span></div>
+                                    <ul id="comTreeSurvey" class="ztree" ></ul>
+                                </div>
+                            </div>
+                            <div class="TozhirightCenter"> 
+                                <div class="case_centerDIv">
+                                    <span class="Tozhi-centerSpan" style="float:left;margin-top:14px;margin-right: 18px;">统计时间：</span>
+                                    <div class="input-group date datepicker dataDiv dateTime" style="margin-top: 8px;">
+                                        <input type="text" id="SurveyTime" class="form-control fontData background_addon">
+                                        <div class="input-group-addon background_addon">
+                                            <img src="img/data.png" style="width:19px; margin-top: 2px;">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="BtnCollection Btnstyle">
+                                    <button class="BtnClass" title="前一天的数据" onclick="countCarListRealfun()">实时车辆清单</button>
+                                    <span class="iconfont iconsousuo icon_sou" title="查询" onclick="SurveyTablefun()"></span>
+                                    <span class="iconfont icondaochu icon_sou" title="导出" onclick="exportSurveyfun()"></span>
+                                    <!-- <button class="BtnClass exportBtn" onclick="SurveyTablefun()" >查询</button>
+                                    <button class="BtnClass exportBtn" onclick="exportSurveyfun()" >导出</button> -->
+                                </div>
+                            </div>
+                            <div class="case_table">
+                                <table id="SurveyTable" class="table table-bordered center" style='table-layout:fixed;'></table>
+                            </div>
+                    </div>
+                    <!-- 记录仪开通进度 -->
+                    <div class="system-box openingProgress-content">
+                        <div class="leftCenter">
+                            <div class="listLeftCenter">
+                                <div class="comTree_mechanism"><span class="mechanism_span comTreeOpeningProgressSpan">总公司</span></div>
+                                <ul id="comTreeOpeningProgress" class="ztree" ></ul>
+                            </div>
+                        </div>
+                        <div class="TozhirightCenter"> 
+                            <div class="BtnCollection Btnstyle">
+                                <span class="iconfont iconsousuo icon_sou" title="查询" onclick="openingProgressTfun()"></span>
+                                <span class="iconfont icondaochu icon_sou" title="导出" onclick="exportOpeningProgressfun()"></span>
+                                <!-- <button class="BtnClass exportBtn" onclick="openingProgressTfun()" >查询</button>
+                                <button class="BtnClass exportBtn" onclick="exportOpeningProgressfun()" >导出</button> -->
+                            </div>
+                        </div>
+                        <div class="case_table">
+                            <table id="openingProgressTable" class="table table-bordered center" style='table-layout:fixed;'></table>
+                        </div>
+                    </div>
+                    <!--  查勘超时率 -->
+                    <div class="system-box surveyTimeout-content">
+                        <div class="leftCenter">
+                            <div class="listLeftCenter">
+                                <div class="comTree_mechanism"><span class="mechanism_span comTreeSurveyTimeoutSpan">总公司</span></div>
+                                <ul id="comTreeSurveyTimeout" class="ztree" ></ul>
+                            </div>
+                        </div>
+                        <!-- 总公司查勘超时率 -->
+                        <div class="TozhirightCenter homepage_survey"> 
+                            <div class="case_centerDIv">
+                                    <span class="Tozhi-centerSpan" style="float:left;margin-top:14px;margin-right: 18px;">统计时间：</span>
+                                    <div class="input-group date datepicker dataDiv dateTime" style="margin-top: 8px;">
+                                        <input type="text" id="surveyTimeout" class="form-control fontData background_addon">
+                                        <div class="input-group-addon background_addon">
+                                            <img src="img/data.png" style="width:19px; margin-top: 2px;">
+                                        </div>
+                                    </div>
+                                </div>
+                            <div class="BtnCollection Btnstyle">
+                                <span class="iconfont iconsousuo icon_sou" title="查询" onclick="surveyTimeoutTableFun()"></span>
+                                <span class="iconfont icondaochu icon_sou" title="导出" onclick="exportSurveyTimeoutfun()"></span>
+                                <span class="iconfont iconwenhao icon_sou" title="触警级别时间规范说明" onclick="Bangzhu()"></span>
+                                <!-- <button class="BtnClass exportBtn" onclick="surveyTimeoutTableFun()" >查询</button>
+                                <button class="BtnClass exportBtn" onclick="exportSurveyTimeoutfun()" >导出</button> -->
+                                <!-- <img class="bangzhu" title="触警级别时间规范说明" src="./img/bangzhu.png" onclick="Bangzhu()"> -->
+                            </div>
+                        </div>
+                        <div class="case_table1 homepage_survey">
+                            <div class="TableTitle">
+                                <div class="TableTitle_span" id="Title_mechanism">
+                                    2019年10月 总公司查勘超时率
+                                </div>
+                                
+                            </div>
+                            <table id="surveyTimeoutTable" class="table table-bordered center" style='table-layout:fixed;'></table>
+                        </div>
+                        <!-- 人员查勘超时率列表 -->
+                        <div class="TozhirightCenter Subpage_survey"> 
+                                <div class="case_centerDIv">
+                                        <span class="Tozhi-centerSpan" style="float:left;margin-top:14px;margin-right: 18px;">统计时间：</span>
+                                        <div class="input-group date datepicker dataDiv dateTime" id="staffSurveyDate" style="margin-top: 8px;">
+                                            <input type="text" id="personnelSurveyTimeout" class="form-control fontData background_addon">
+                                            <div class="input-group-addon background_addon">
+                                                <img src="img/data.png" style="width:19px; margin-top: 2px;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                <div class="BtnCollection Btnstyle">
+                                    <span class="iconfont iconsousuo icon_sou" title="查询" onclick="staffSurveyTimeoutTableFun()"></span>
+                                    <span class="iconfont icondaochu icon_sou" title="导出" onclick="exportStaffSurveyTimeoutfun()"  id="exportStaffSurveyTimeout" comCodes="00000000" comcname="总公司" ></span>
+                                    <span class="iconfont iconwenhao icon_sou" title="触警级别时间规范说明" onclick="Bangzhu()"></span>
+                                    <!-- <button class="BtnClass exportBtn" onclick="staffSurveyTimeoutTableFun()"  >查询</button>
+                                    <button class="BtnClass exportBtn" id="exportStaffSurveyTimeout" comCodes="00000000" comcname="总公司" onclick="exportStaffSurveyTimeoutfun()" >导出</button> -->
+                                    <!-- <img class="bangzhu" title="触警级别时间规范说明" src="./img/bangzhu.png" onclick="Bangzhu()"> -->
+                                </div>
+                            </div>
+                        <div class="case_table1 Subpage_survey">
+                            <div class="TableTitle">
+                                <!-- <span id="Title_staff">2019年10月 人员查勘超时率列表</span> -->
+                                <div class="TableTitle_span" id="Title_staff">
+                                    2019年10月 人员查勘超时率列表
+                                </div>
+                                <img class="Timeout_Return"  onclick="TimeoutReturnfun(2)" src="img/back-btn.png"/>
+                            </div>
+                            <table id="personnelSurveyTimeoutTable" class="table table-bordered center" style='table-layout:fixed;'></table>
+                        </div>
+                    </div>
+                     <!-- LoginAmount 登录量-->
+                     <div class="system-box loginAmount-content">
+                        <div class="leftCenter">
+                            <div class="listLeftCenter">
+                                <div class="comTree_mechanism"><span class="mechanism_span comTreeLoginAmountSpan">总公司</span></div>
+                                <ul id="comTreeLoginAmount" class="ztree" ></ul>
+                            </div>
+                        </div>
+                        <!-- 分公司 -->
+                        <div class="TozhirightCenter homepage_login"> 
+                            <div class="case_centerDIv">
+                                    <span class="Tozhi-centerSpan" style="float:left;margin-top:14px;margin-right: 18px;">统计时间：</span>
+                                    <div class="input-group date datepicker dataDiv dateTime" style="margin-top: 8px;">
+                                        <input type="text" id="LoginAmountTime" class="form-control fontData background_addon">
+                                        <div class="input-group-addon background_addon">
+                                            <img src="img/data.png" style="width:19px; margin-top: 2px;">
+                                        </div>
+                                    </div>
+                                </div>
+                            <div class="BtnCollection Btnstyle">
+                                <span class="iconfont iconsousuo icon_sou" title="查询" onclick="LoginAmountfun()"></span>
+                                <span class="iconfont icondaochu icon_sou" title="导出" onclick="exportLoginAmountfun()"></span>
+                                <!-- <button class="BtnClass exportBtn" onclick="LoginAmountfun()" >查询</button>
+                                <button class="BtnClass exportBtn" onclick="exportLoginAmountfun()" >导出</button> -->
+
+                            </div>
+                        </div>
+                        <div class="case_table1 homepage_login">
+                                <div class="TableTitle">
+                                    <div class="TableTitle_span" id="login_homepage">
+                                        2019年10月 总公司登录量
+                                    </div>
+                                </div>
+                            <table id="LoginAmountTable" class="table table-bordered center" style='table-layout:fixed;'></table>
+                        </div>
+                        <!-- 人员 -->
+                        <div class="TozhirightCenter Subpage_login"> 
+                                <div class="case_centerDIv">
+                                        <span class="Tozhi-centerSpan" style="float:left;margin-top:14px;margin-right: 18px;">统计时间：</span>
+                                        <div class="input-group date datepicker dataDiv dateTime" id="staffLoginDate" style="margin-top: 8px;">
+                                            <input type="text" id="LoginAmountTime" class="form-control fontData background_addon">
+                                            <div class="input-group-addon background_addon">
+                                                <img src="img/data.png" style="width:19px; margin-top: 2px;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                <div class="BtnCollection Btnstyle">
+                                    <span class="iconfont iconsousuo icon_sou" title="查询" onclick="staffLoginAmountfun()"></span>
+                                    <span class="iconfont icondaochu icon_sou" title="导出"  id="exportStafflogin" flag="0" useCode="" comcname="总公司"  onclick="exportStaffLoginAmountfun()"></span>
+                                    <!-- <button class="BtnClass exportBtn" onclick="staffLoginAmountfun()" >查询</button>
+                                    <button class="BtnClass exportBtn" id="exportStafflogin" flag="0" useCode="" comcname="总公司" onclick="exportStaffLoginAmountfun()" >导出</button> -->
+    
+                                </div>
+                            </div>
+                            <div class="case_table1 Subpage_login">
+                                    <div class="TableTitle">
+                                        <!-- <span id="login_subpage">2019年10月 人员查勘超时率列表</span> -->
+                                        <div class="TableTitle_span" id="login_subpage">
+                                            2019年10月 人员查勘超时率列表
+                                        </div>
+                                        <img class="Timeout_Return"  onclick="LoginSwitchingFun(2)" src="img/back-btn.png"/>
+                                    </div>
+                                    
+                                <table id="staffLoginAmountTable" class="table table-bordered center" style='table-layout:fixed;'></table>
+                            </div>
+                    </div>
+                    <!-- 服务记录仪上线率 -->
+                    <!-- <div class="system-box serveEecord-content">
+                        <div class="leftCenter">
+                            <div class="listLeftCenter">
+                                <ul id="comTreeServeEecord" class="ztree" ></ul>
+                            </div>
+                        </div>
+                
+                        <div class="change_div serveRecord_main">
+                            <div id="serveRecord_div">
+                                <span>服务记录仪上线率</span><hr/>
+                                <div class="serveRecord_centerDiv right_160px">
+                                    <span class="Tozhi-centerSpan" style="float:left;margin-top:14px;margin-right: 18px;">统计时间：</span>
+                                    <div class="input-group date datepicker dataDiv yesterdayTime" style="margin-top: 8px;">
+                                        <input type="text" id="serveRecord_mainTime" class="form-control fontData background_addon">
+                                        <div class="input-group-addon background_addon">
+                                            <img src="img/data.png" style="width:19px; margin-top: 2px;">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="BtnCollection Btnstyle">
+                                    <button class="BtnClass" onclick="" >查询</button>
+                                    <button class="BtnClass exportBtn" onclick="" >导出</button>
+                                </div>
+                            </div>
+                            <div class="serveRecord_Table">
+
+                            </div>
+                        </div>
+                     
+                        <div class="change_div serveRecord_accessory">
+                            <div id="serveRecord_div">
+                                <span>人员服务记录仪上线率</span><img id="serveRecord_back" onclick="serveRecordChangeFun(1)" src="img/back-btn.png"> <hr/>
+                                <div class="serveRecord_centerDiv right_350px">
+                                    <div class="input-group date datepicker dataDiv yesterdayTime" style="margin-top: 8px;">
+                                        <input type="text" id="serveRecord_accessoryTime" class="form-control fontData background_addon">
+                                        <div class="input-group-addon background_addon">
+                                            <img src="img/data.png" style="width:19px; margin-top: 2px;">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="serveRecord_centerDiv right_160px">
+                                    <input type="text" id="serveRecord_accessoryText" placeholder="请输入人员姓名或人员编号" 
+                                    onkeyup="value=value.replace(/[^\a-\z\A-\Z0-9\u4E00-\u9FA5]/g,'')" 
+                                    onpaste="value=value.replace(/[^\a-\z\A-\Z0-9\u4E00-\u9FA5]/g,'')" 
+                                    oncontextmenu = "value=value.replace(/[^\a-\z\A-\Z0-9\u4E00-\u9FA5]/g,'')"
+                                    style="width: 250px;" class="inputText1 TozhiText" />
+                                </div>
+                                <div class="BtnCollection Btnstyle">
+                                    <button class="BtnClass" onclick="" >查询</button>
+                                    <button class="BtnClass exportBtn" onclick="" >导出</button>
+                                </div>
+                            </div>
+                            <div class="serveRecord_Table">
+
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+        </div>
+
+    </div>
+</div>
+<!-- 模态框（Modal）人员 -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content information">
+            <div class="modal-header">
+                
+                <button type="button" class="close" title= "关闭" data-dismiss="modal" aria-hidden="true">
+                    <span class="iconfont iconguanbi Icon_close" title="关闭"></span>
+                </button>
+                
+                <h4 class="modal-title" id="myModalLabel" Judgment="1">
+                    <b>用户系统人员清单</b>
+                    <span class="iconfont icondaochu Icon_download" title="下载"></span>
+                    <!-- <img class="downloadImg" id="currencyImg" title= "下载" comcode = "00000000" comcname = "总公司" source="false" sourcery="false" onclick="exportCurrency(this)"  src="../loginlog/img/downloadImg.png"/> -->
+                </h4>
+            </div>
+            <div class="modal-body">
+                <div class="modalImdSpan">
+                    <table id="currencyTable" class="table table-bordered center" style='table-layout:fixed;'></table>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+<!-- 模态框（Modal） -->
+
+<!-- 模态框（Modal） 查勘车-->
+<div class="modal fade" id="SurveyModal" tabindex="-1" role="dialog" aria-labelledby="SurveyModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content information">
+            <div class="modal-header">
+                
+                <button type="button" class="close" title= "关闭" data-dismiss="modal" aria-hidden="true">×</button>
+                
+                <h4 class="modal-title" id="SurveyModalLabel" Judgment="1">
+                    <b>平台已维护车辆清单</b>
+                    <img class="downloadImg" id="SurveyCurrencyImg" title="下载" comcode = "00000000" comcname = "总公司" onclick="SurveyExportC(this)"  src="../loginlog/img/downloadImg.png"/>
+                </h4>
+            </div>
+            <div class="modal-body">
+                <div class="modalImdSpan">
+                    <table id="SurveycurrencyTable" class="table table-bordered center" style='table-layout:fixed;'></table>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+<!-- 模态框（Modal） -->
+
+<!-- 模态框（Modal） 帮助文档-->
+<div class="modal fade" id="BangzhuModal" tabindex="-1" role="dialog" aria-labelledby="BangzhuLabel" aria-hidden="true">
+    <div class="modal-dialog dialogBangZhu">
+        <div class="modal-content information">
+            <div class="modal-header">
+                <button type="button" class="close" title= "关闭" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="BangzhuLabel" Judgment="1">
+                    <b>触警级别时间规范说明</b>
+                </h4>
+            </div>
+            <div class="modal-body" style="margin-bottom: 2%;">
+                <div class="modalImdSpanBang">
+                        1、根据《车险理赔实务规范(2018修订版)》要求： </br>
+                        &nbsp;(1) 接到查勘调度任务后,5分钟内主动与客户取得联系,大致了解案件情况,确认具体的出险地点。</br>
+                        &nbsp;(2) 按照设有分支机构的城区范围内30分钟、非城区60分钟的服务承诺,合理约定到达时间,并应在约定的时间内到达现场。</br></br>
+                        2、关于预警时间的确定：</br>
+                        &nbsp;(1) 目前,系统未对城区和非城区作区分,县级统一按照30分钟设定查勘预警值。</br>
+                        &nbsp;如果实际为非城区,分公司提交申请,后台人员核实后,可以将预警值放开至60分钟。此为触警县级,记为X。</br>
+                        &nbsp;(2) X+60分钟,短信报至上一级,即触警地市级；</br>
+                        &nbsp;(3) X+60+60分钟,短信报至再上一级,即触蝥省级；</br>
+                        &nbsp;(4) X+60+60+60分钟,短信报至总公司,即触警总公司。</br></br>
+                        3、触警率计算规范：</br>
+                        &nbsp;(1) 县级触警率=触警县级案件量/现场查勘总量；</br>
+                        &nbsp;(2) 地市级触警率=触警地市级案件量现场査勘总量；</br>
+                        &nbsp;(3) 省级触警率=触警省级案件量现场查勘总量；</br>
+                        &nbsp;(4) 总公司触警率=触警总公司案件量现场查勘总量。</br>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+<!-- 模态框（Modal） -->
+
+<!-- 模态框（Modal） 第一级总触警-->
+<div class="modal fade" id="touchPoliceModal" tabindex="-1" role="dialog" aria-labelledby="touchPoliceModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content information">
+            <div class="modal-header">
+                
+                <button type="button" class="close" title= "关闭" data-dismiss="modal" aria-hidden="true">×</button>
+                
+                <h4 class="modal-title" id="touchPoliceModalLabel" >
+                    <b>第一级总触警案件量清单</b>
+                    <img class="downloadImg" id="touchPoliceIMG" title="下载" switchs="1" comcode = "00000000" date=""  onclick="touchPoliceExportC(this)"  src="../loginlog/img/downloadImg.png"/>
+                </h4>
+            </div>
+            <div class="modal-body">
+                <div class="modalImdSpan">
+                    <table id="touchPoliceTable" class="table table-bordered center" style='table-layout:fixed;'></table>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+<!-- 模态框（Modal） -->
+<!-- 模态框（Modal） 人员登录量列表清单-->
+<div class="modal fade" id="StaffLoginModal" tabindex="-1" role="dialog" aria-labelledby="StaffLoginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content information">
+            <div class="modal-header">
+                <button type="button" class="close" title= "关闭" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="StaffLoginModalLabel" >
+                    <b>人员登录量列表清单</b>
+                    <img class="downloadImg" id="StaffLoginIMG" title="下载" comcode = "00000000" useCode="" date=""  onclick="StaffLoginExportC(this)"  src="../loginlog/img/downloadImg.png"/>
+                </h4>
+            </div>
+            <div class="modal-body">
+                <div class="modalImdSpan">
+                    <table id="StaffLoginTable" class="table table-bordered center" style='table-layout:fixed;'></table>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+<!-- 模态框（Modal） -->
+
+<div id="loadingS">
+    <div id="loading">正在努力地加载数据中，请稍候……</div>
+</div>
+</body>
+<!-- jquery -->
+<script src="js/jquery-1.10.2.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/Table/bootstrap-table.min.js"></script>
+<script type="text/javascript" src="js/Table/bootstrap-table-zh-CN.min.js"></script>
+<script type="text/javascript" src="js/Data/bootstrap-datepicker.min.js"></script>
+<script type="text/javascript" src="js/Data/bootstrap-datepicker.zh-CN.min.js"></script>
+<script type="text/javascript" src="lib/ztree3.5.15/js/jquery.ztree.all-3.5.js"></script>
+<script src="js/loginlog.js"></script>
+
+</html>
